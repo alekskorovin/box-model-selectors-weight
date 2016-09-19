@@ -979,6 +979,9 @@ figcaption {
 .hljs-tag .hljs-string {
   color: rgb(79, 11, 99);
 }
+li,
+dt,
+dd,
 h1,
 h2,
 h3,
@@ -989,6 +992,9 @@ li,
 p {
   position: relative;
 }
+li:before,
+dt:before,
+dd:before,
 h1:before,
 h2:before,
 h3:before,
@@ -1003,6 +1009,9 @@ li:before {
   background: rgba(50%, 50%, 50%, 0);
   z-index: -1;
 }
+li:hover:before,
+dt:hover:before,
+dd:hover:before,
 h6:hover:before,
 h5:hover:before,
 h4:hover:before,
@@ -1048,3 +1057,83 @@ body {
   margin: 0.5rem 0;
   font-size: 1rem;
 }
+.box-model {
+    padding: 1rem;
+    margin: 1rem;
+}
+.box-content-en {
+    float: right;
+}
+.box-model:hover,
+.box-model:hover .box-model{
+    background: #fff;
+}
+.box-margin.hover:hover,
+.box-margin {
+    background: #f9cc9d;
+    border: dashed 1px #222;
+}
+.box-model:hover .box-border.hover,
+.box-border {
+    background: #fddd9b;
+    border: solid 1px #222;
+}
+.box-model:hover .box-padding.hover,
+.box-padding {
+    background: #c2cf8a;
+    border: dashed 1px #222;
+}
+.box-model:hover .box-element.hover,
+.box-element {
+    background: #8bb5c0;
+    border: solid 1px #808080;
+}
+.list-big dd {
+    margin: 0.3rem 1rem 1rem;
+}
+.border {
+    padding: 0.3rem;
+}
+.border.solid {
+    border-style: solid;
+}
+.border.dashed {
+    border-style: dashed;
+}
+.border.dotted {
+    border-style: dotted;
+}
+.border.double {
+    border-style: double;
+}
+.border.groove {
+    border-style: groove;
+}
+.border.ridge {
+    border-style: ridge;
+}
+.border.inset {
+    border-style: inset;
+}
+.border.outset {
+    border-style: outset;
+}
+.border.none {
+    border-style: none;
+}
+.border.width-top {
+    border-top-width: 7px;
+}
+.border.width-right {
+    border-right-width: 7px;
+}
+.border.width-bottom {
+    border-bottom-width: 7px;
+}
+.border.width-left {
+    border-left-width: 7px;
+}
+.bad * {
+    color: red !important;
+}
+

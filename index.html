@@ -186,22 +186,426 @@
                     <img src="images/molding.jpg" alt="padding - внутренний отступ" />
                 </li>
             </ul>
+            <p>Внешние и внутренние отступы можно задавать отдельно для четырех сторон элемента:</p>
+            <ul>
+                <li><b>margin-top</b> &mdash; внешний отступ сверху, <b>padding-top</b> &mdash; внутренний отступ сверху</li>
+                <li><b>margin-right</b> &mdash; внешний отступ справа, <b>padding-right</b> &mdash; внутренний отступ справа</li>
+                <li><b>margin-bottom</b> &mdash; внешний отступ снизу, <b>padding-bottom</b> &mdash; внутренний отступ снизу</li>
+                <li><b>margin-left</b> &mdash; внешний отступ слева, <b>padding-left</b> &mdash; внутренний отступ слева</li>
+            </ul>
             <p>
-                Блочная модель может применяться к любому элементу веб-страницы.
+                Если задано одно значени отступа, например <code class="css">margin: 10px;</code> то это значение будет использовано для всех четырёх сторон: сверху справа снизу слева.
             </p>
+            <p>
+                Есть сокращенная запись <b>shortcut</b> позволяющая задвать разные значения для сторон. Порядок задания значений идёт по часовой стрелке и критичен:
+            </p>
+            <blockquote>
+                <b>Синтаксис:</b>
+                padding: сверху справа снизу слева;
+            </blockquote>
+            <pre><code class="css">padding: 10px 20px 30px 40px;</code></pre>
+            <p data-height="386" data-theme-id="0" data-slug-hash="qaNZvA" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/qaNZvA/">padding shortcut</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <p>Задаёт внутренний отступ:</p>
+            <ul>
+                <li>Сверху 10px</li>
+                <li>Справа 20px</li>
+                <li>Снизу 30px</li>
+                <li>Слева 40px</li>
+            </ul>
+            <hr />
+            <p>Если указать три значения, будет использован отступ сверху как первое значение, одинаковый отступ слева и справа их второго значения, отступ снизу из третьего значения.</p>
+            <blockquote>
+                <b>Синтаксис:</b>
+                margin: сверху слева_и_справа снизу;
+            </blockquote>
+            <pre><code class="css">margin: 10px 20px 30px;</code></pre>
+            <p>Задаёт внешний отступ:</p>
+            <ul>
+                <li>Сверху 10px</li>
+                <li>Слева и справа по 20px</li>
+                <li>Снизу 30px</li>
+            </ul>
+            <hr />
+            <p>Если указать два значения, будет использован одинаковый отступ сверху и снизу взятый из первого значения, и одинаковый отступ слева и справа, взятый из второго значения.</p>
+            <blockquote>
+                <b>Синтаксис:</b>
+                margin: сверху_и_снизу слева_и_справа;
+            </blockquote>
+            <pre><code class="css">margin: 10px 20px;</code></pre>
+            <p>Задаёт внешний отступ:</p>
+            <ul>
+                <li>Сверху и снизу по 10px</li>
+                <li>Слева и справа по 10px</li>
+            </ul>
+            <blockquote>
+                <b>Особенность:</b>
+                Вертикальные внешние отступы <strong>margin-top</strong> и <strong>margin-bottom</strong> "схлопываются" (так же если заданы через сокращённую форму записи: margin).<br />
+                Горизонтальные внешние отступы ведут себя как положено.
+            </blockquote>
+            <p data-height="340" data-theme-id="0" data-slug-hash="zKBgPx" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/zKBgPx/">margin-top, margin-bottom</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <p data-height="217" data-theme-id="0" data-slug-hash="JRKgpX" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/JRKgpX/">margin-left, margin-right</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <hr />
+            <p>
+                Внешние, внутренние отступы, рамка и размеры элемента это части того, что называется <b>блочная модель</b>. Блочная модель работает так:</p>
+            <ul>
+                <li>снаружи элемента располагается внешний отступ <b>margin</b></li>
+                <li>рамка <b>border</b> окружает внутренний отступ</li>
+                <li>внутренний отступ <b>padding</b> окружает контентную обасть (содержимое элемента)</li>
+                <li>в центре находится содержимое элемента контентная область</li>
+            </ul>
+            <p>Если не задавать резмер элементу, он рассчитывается автоматически исходя из содержимого элемента.</p>
+            <div class="box-model box-margin">
+                <div class="clearfix">
+                    <div class="box-content-en">margin</div>
+                    <div class="box-content-ru">внешний отступ</div>
+                </div>
+                <div class="box-model box-border">
+                    <div class="clearfix">
+                        <div class="box-content-en">border</div>
+                        <div class="box-content-ru">рамка</div>
+                    </div>
+                    <div class="box-model box-padding">
+                        <div class="clearfix">
+                            <div class="box-content-en">padding</div>
+                            <div class="box-content-ru">внутренний отступ</div>
+                        </div>
+                        <div class="box-model box-element">
+                            <div class="clearfix">
+                                <div class="box-content-en">element</div>
+                                <div class="box-content-ru">cодержимое элемента</div>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="box-content-en">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="box-content-en">&nbsp;</div>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="box-content-en">&nbsp;</div>
+                </div>
+            </div>
+            </p>
+            <p>
+                Блочная модель может применяться к любому блочному элементу веб-страницы и к остальным элементам с некоторыми особенностями.
+            </p>
+            <h3>Рамки</h3>
+            <p>Рамки могут применяться к большинству HTML элементов внутри элемента <b>body</b>.</p>
+            <h4>border-style</h4>
+            <p>Для добавления рамки вокруг элемента достаточно указать CSS-свойство <code class="css">border-style</code> со значениями:</p>
+            <dl class="list-big">
+                <dt>
+                    <b>solid</b>
+                </dt>
+                <dd>
+                    <span class="border solid">элемент со сплошной рамкой</span>
+                </dd>
+                <dt>
+                    <b>dashed</b>
+                </dt>
+                <dd>
+                    <span class="border dashed">элемент с пунктирной рамкой</span>
+                </dd>
+                <dt>
+                    <b>dotted</b>
+                </dt>
+                <dd>
+                    <span class="border dotted">элемент с точечной рамкой</span>
+                </dd>
+                <dt>
+                    <b>double</b>
+                </dt>
+                <dd>
+                    <span class="border dotted">элемент с двойной рамкой</span>
+                </dd>
+                <dt>
+                    <b>groove</b>
+                </dt>
+                <dd>
+                    <span class="border groove">элемент со вдавленной рамкой</span>
+                </dd>
+                <dt>
+                    <b>ridge</b>
+                </dt>
+                <dd>
+                    <span class="border ridge">элемент с объемной рамкой</span>
+                </dd>
+                <dt>
+                    <b>inset</b>
+                </dt>
+                <dd>
+                    <span class="border inset">элемент с рамкой имитирующей вдавленность</span>
+                </dd>
+                <dt>
+                    <b>outset</b>
+                </dt>
+                <dd>
+                    <span class="border outset">элемент с рамкой имитирующей выпуклость</span>
+                </dd>
+                <dt>
+                    <b>none, hidden</b>
+                </dt>
+                <dd>
+                    <span class="border none">элемент с нулевой рамкой</span>
+                </dd>
+            </dl>
+            <p>Свойство <b>border-style</b> с четырьмя заданными значениями <code class="css">border-style: solid dotted dashed none;</code> это сокращенная запись подобных как и для <b>margin</b>/<b>padding</b> свойств относящимся к сторонам:</p>
+            <ul>
+                <li><b>border-top-style</b> &mdash; стиль рамки сверху.</li>
+                <li><b>border-right-style</b> &mdash; стиль рамки справа.</li>
+                <li><b>border-bottom-style</b> &mdash; стиль рамки снизу.</li>
+                <li><b>border-left-style</b> &mdash; стиль рамки слева.</li>
+            </ul>
+            <h4>border-width</h4>
+            <p>Свойство <b>border-width</b> задает ширину рамки, как правило в <b>px</b>, но могут быть испльзованы и другие размерные единицы.</p>
+            <p><b>border-width</b> с четырьмя заданными значениями <code class="css">border-width: 1px 2px 3px 4px;</code> это сокращенная запись подобных как и для <b>margin</b>/<b>padding</b> свойств относящимся к сторонам:</p>
+            <dl class="list-big">
+                <dt>
+                    <b>border-top-width: 7px</b>
+                </dt>
+                <dd>
+                    <span class="border solid width-top">значение ширины рамки сверху</span>
+                </dd>
+                <dt>
+                    <b>border-right-width: 7px</b>
+                </dt>
+                <dd>
+                    <span class="border solid width-right">значение ширины рамки справа</span>
+                </dd>
+                <dt>
+                    <b>border-bottom-width: 7px</b>
+                </dt>
+                <dd>
+                    <span class="border solid width-bottom">значение ширины рамки снизу</span>
+                </dd>
+                <dt>
+                    <b>border-left-width: 7px</b>
+                </dt>
+                <dd>
+                    <span class="border solid width-left">значение ширины рамки слева</span>
+                </dd>
+            </dl>
+            <h4>border-color</h4>
+            <p>
+                <b>border-color</b> используется для задания цвета рамки. Так же может задаваться в сокращённой форме записи и по отдельности для сторон элемента.
+            </p>
+            <p>
+                Можно использовать задавать разные свойства для сторон рамок по отдельности: <code class="css">border-top: solid 1px red;</code>.
+            </p>
+            <h4>border-radius</h4>
+            <p>
+                <b>border-radius</b> позволяет задать радиус скругления. Это свойство не входит в сокращённую запись <b>border</b> и имеет собственную сокращенную форму записи <code class="css">border-radius: 10px 20px 30px 40px;</code>, и может задаваться отдельно для углов элемента:
+            </p>
+            <ul>
+                <li><b>border-top-left-radius</b> &mdash; радиус скругления верхнего левого угла</li>
+                <li><b>border-top-right-radius</b> &mdash; радиус скругления верхнего правого угла</li>
+                <li><b>border-bottom-right-radius</b> &mdash; радиус скругления нижнего правого угла</li>
+                <li><b>border-bottom-left-radius</b> &mdash; радиус скругления нижнего левого угла</li>
+            </ul>
+            <p data-height="337" data-theme-id="0" data-slug-hash="JRRPGJ" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/JRRPGJ/">border-radius shortcut</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             <h2>
                 <a id="html-code-style" class="anchor" href="html-code-style" aria-hidden="true"><span aria-hidden="true"
                                                                                   class="octicon octicon-link"></span>Стиль кода HTML</a>
             </h2>
+            <p>
+                Стандарты W3C задают синтаксис для HTML-кода но не говорят как имено писать код, как его форматировать, какие использовать подходы при офромлении кода.
+            </p>
+            <p>
+                Стиль кода довольно важен для создания, запуска и поддержки проекта, потому что в конечном итоге следование выбранному стилю кода приводит к:
+            </p>
+            <ul>
+                <li>высокой читабельности кода, что снижает количество ошибок.</li>
+                <li>минимальному времени на поддержку и изменений проекта: добавление, модификация, удаление элементов.</li>
+                <li>однородности кода при добавлении новых страниц, разделов.</li>
+            </ul>
+            <p>
+                Для правильного форматирования рекомендуется использовать файл .editorconfig в вашем редакторе. В этом файле размещаются настройки форматирования кода редактора.
+            </p>
+            <h3>Примеры стилей кода:</h3>
+            <ul>
+                <li><a href="http://html-academy.ru/codeguide/">Стиль кода Академии HTML</a></li>
+            </ul>
+            <h3>Язык и кодировка</h3>
+            <p>Рекомендуется всегда использовать кодировку символов <b>utf-8</b>. Кодировка задается в элементе <b>head</b> с помощью элемента <b>meta</b> с атрибутом <b>charset</b> равному <b>utf-8</b>:</p>
+            <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    <b>&lt;meta charset="utf-8"&gt;</b>
+&lt;/head&gt;</code></pre>
+            <p>Язык задаётся атрибутом <b>lang</b> элемента <b>html</b>:</p>
+            <pre><code class="html">&lt;!DOCTYPE html&gt;
+<b>&lt;html lang="ru"&gt;</b>
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+&lt;/head&gt;</code></pre>
+            <h3>Отступы</h3>
+            <p>Табы или пробелы? По статистике GitHub в большинстве проектов используются пробелы. Преимущества пробелов в том что код всегда будет выглядеть одинаково вне зависимости от настроек, если используются табы, то их ширина зависит от настроек, например один таб может быть равен двум либо четырём пробелам.</p>
+            <p>Стандартом де-факто является использование отступов в четыре пробела для каждого вложенного элемента, так чтобы открывающий и закрывающий теги находились на одном уровне (однако можно использовать и 2 пробела либо tab, единственным правилом является следование выбранному стилю в каждом созданном HTMl-документе).</p>
+            <h3>Синтаксис</h3>
+            <p>
+                Теги и их атрибуты пишутся строчными буквами. Для значений атрибутов рекомендуется всегда ставить двойные кавычки.
+            </p>
+
+            <h4>Правильно:</h4>
+            <code class="html">&lt;<b>img</b> <b>src</b>=<b>"</b>images/image.jpg<b>"</b> <b>alt</b>=<b>"</b>Моё изображение<b>"</b> /&gt;</code>
+            <div class="bad">
+                <h5>Плохой код:</h5>
+                <code class="html">&lt;IMG src='images/image.jpg' ALT='Моё изображение' /&gt;</code>
+            </div>
+            <hr />
+            <p>Закрывающие теги всегда ставятся.</p>
+            <code class="html">&lt;li&gt;Текст<b>&lt;/li&gt;</b></code>
+            <hr />
+            <p>Атрибут CSS-класса рекомендуется ставить первым.</p>
+            <code class="html">&lt;h1 <b>class="headline"</b> title="Заголовок страницы"&gt;Заголовок страницы&lt;/h1&gt;</code>
+            <h3>Подключение стилей</h3>
+            <p>
+                Внешние таблицы стилей подключаются в элементе <b>head</b>:
+            </p>
+            <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;</code></pre>
+            <p>
+                Это обеспечивает более быстрое применение стилей к формируему дереву элементов DOM.
+            </p>
+            <h3>Подключение скриптов</h3>
+            <p>
+                Внешние скрипты подключаются перед закрывающим элементом <b>body</b> (в самом низу страницы):
+            </p>
+            <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;...&lt;/head&gt;
+&lt;body&gt;
+    ...
+    &lt;script src="main.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            <p>
+                Это обеспечивает запуск скриптов после отображения содержимого. Скрипты начинают выполняться только после того как загружены, а загрузка начинается когда браузер находит в HTML-коде элемент <b>script</b>.
+            </p>
             <h2>
                 <a id="css-code-style" class="anchor" href="css-code-style" aria-hidden="true"><span aria-hidden="true"
                                                                                   class="octicon octicon-link"></span>Стиль кода CSS</a>
             </h2>
+            <h3>Синтаксис</h3>
+            <p>После пары свойство-значение ставится точка с запятой:</p>
+<pre><code class="css">h1 {
+    font-size: 20px<b>;</b>
+}</code></pre>
+            <p>Для отступов перед парой свойство-значение необходимо всегда использовать выбранное значение (рекомендуется 4 пробела как и в HTML).</p>
+            <p>
+                Названия тегов и свойств в правилах пишутся строчными буквами.
+            </p>
+            <p>
+                После двоеточия в правилах реомендуется ставить пробел: <code class="css">color: #ccc;</code>
+            </p>
+            <p>
+                Каждое объявление в списке правил следует писать с новой строки:
+            </p>
+<pre><code class="css">h1 {
+    font-size: 20px;
+    color: maroon;
+}</code></pre>
+            <p>
+                Закрывающая фигурная скобка пишется на новой строке без пробела перед ней:
+            </p>
+<pre><code class="css">h1 {
+    border-bottom: solid 1px maroon;
+    padding-bottom: 10px;
+<b>}</b></code></pre>
+            <p>
+                Длина селекторов должна быть не больше трёх-четырёх классов.
+            </p>
+            <p>
+                Избегать селектор по <b>id</b> так где это возможно.
+            </p>
+            <p>
+                Везде, там где это возможно, следует стараться использовать имя класса как селектор.<br />
+                <code class="css">.class-name { padding: 10px; }</code>
+            </p>
             <h2>
                 <a id="selectors-weight" class="anchor" href="selectors-weight" aria-hidden="true"><span aria-hidden="true"
                                                                                   class="octicon octicon-link"></span>“Вес селекторов”</a>
             </h2>
-
+            <h3>Селекторы</h3>
+            <p>В HTML мы имеем элементы, их атрибуты, CSS-классы и id-шники которые по сути тоже являются атрибутами.</p>
+            <p>Используя эти составляющие в CSS можно писать селекторы выбирающие элементы по тегу по отношению к другим элементам, по CSS-классу по id либо другим атрибутам. В зависимости от типа, селекторы имеют разный вес (приоритет по которому предпочтение отдается более весомому селектору).</p>
+            <ul>
+                <li>
+                    Теги в качестве селекторов:<br />
+                    <pre><code class="css">body {
+    color: grey;
+}</pre></code>
+                </li>
+                <li>CSS-класс добавляется с помощью атрибута <b>class</b> значением которого является имя класса:<br />
+                    <code class="html">&lt;p <b>class="primary-color"</b>&gt;Текст с основным цветом&lt;/p&gt;</code> к этому параграфу можно обратиться используя селектор CSS-класс (добавляется точка перед именем класса):
+                    <pre><code class="css">.primary-color {
+    color: blue;
+}</pre></code>
+                </li>
+                <li>ID добавляется с помощью атрибута <b>id</b> значением которого является имя идентификатор:<br />
+                    <code class="html">&lt;h1 <b>id="main-headline"</b>&gt;Основной заголовок&lt;/p&gt;</code> к этому заголовку можно обратиться используя селектор <b>id</b> (добавляется <b>#</b> перед именем класса):
+                    <pre><code class="css">#main-headline {
+    font-size: 2rem;
+}</pre></code></li>
+            </ul>
+            <p>Если у нас несколько правил и селекторы имеют одинаковый вес, выигрывает селектор идущий ниже по коду:</p>
+            <p data-height="180" data-theme-id="0" data-slug-hash="kkkWPP" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/kkkWPP/">equal specificity of selectors</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <p>Когда правила относятся к одному и тому же элементу но с разными селекторами, в дело включается вычисление специфичности, "вес селекторов".</p>
+            <h3>Вычисление веса селекторов</h3>
+            <p>На изображении ниже показано как рассчитывается специфичность:</p>
+            <img src="images/specificity-1.png" alt="Вычисление веса селекторов" />
+            <p>Хорошая англоязычная</p>
+            <ul>
+                <li>Если у нас строчные <b>inline</b>-стили: <br /><code class="css">&lt;p style="color: maroon;"&gt;Бардовый цвет&lt;/p&gt;</code>, то эти стили выигрывают набирая 1000 очков (на самом деле это не <b>1000</b> а <b>1,0,0,0</b> т.к. используется не десятичная система с переносом цифр справа налево).</li>
+                <li>Если у нас селектор <b>p</b> &ndash; это элемент, его специфичность 0,0,0,1:
+                    <img src="images/specificity-calculation-1.png" alt="Специфичность одного элемента 0,0,0,1" />
+                </li>
+                <li>Если наш селектор: <b>body p</b> &ndash; это два элемента, специфичность 0,0,0,1+1 = 0,0,0,2:
+                    <img src="images/specificity-calculation-2.png" alt="Специфичность двух элементов 0,0,0,2" />
+                </li>
+                <li>Селектор класса: <b>.headline</b> &ndash; это CSS-класс, специфичность 0,0,1,0 = 0,0,1,0 (10):
+                    <img src="images/specificity-calculation-3.png" alt="Специфичность одного класса 0,0,1,0 (10)" />
+                    <br />
+                    если добавить название элемента перед классом <b>h1.headline</b> &mdash; специфичность увеличится до 0,0,1,1 (11):
+                    <br />
+                    <img src="images/specificity-calculation-4.png" alt="Специфичность одного класса и элемента 0,0,1,1 (11)" />
+                </li>
+                <li>Селектор айдишника или идентификатора <b>#main-headline</b> составляет 0,1,0,0 (100)<br />
+                    <img src="images/specificity-calculation-id.png" alt="Специфичность id 0,1,0,0" />
+                    <p data-height="179" data-theme-id="0" data-slug-hash="ZppByp" data-default-tab="css,result" data-user="alekskorovin"  data-editable="true" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/ZppByp/">specificity id > class</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                </li>
+            </ul>
+            <h4>!important</h4>
+            <p>Однако стоит помнить о специальном свойстве <b>!important</b> добавляемом после значения свойства:<br />
+                <code class="css">p { color: maroon <b>!important;</b> }</code>
+            </p>
+            <p>Следует по возможности избегать использования свойства <b>!important</b>, потому что его сложно переопределить &mdash; либо другим свойством с <b>!important</b> ниже по коду, либо <b>inline</b>-стилем <b>!important</b>:</p>
+            <p><code class="css">p { color: maroon <b>!important;</b> }</code> &mdash; этому соответствует специфичность 0,1,0,0,0,1 (10001)<br />
+                <img src="images/specificity-1-extended.png" alt="Специфичность !important 0,1,0,0,0,0 (10000)" />
+            </p>
+            <p data-height="232" data-theme-id="0" data-slug-hash="LRRbjZ" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/LRRbjZ/">important</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <p>Если используется строчынй <b>inline</b>-стиль с <b>!important</b><br />
+                <code class="html">&lt;h1 style="color: blue !important;"&gt;Заголовок&lt;/h1&gt;</code>, то специфичность имеет ещё больший вес &mdash; 1,0,0,0,0,0 (100000):<br />
+                <img src="images/specificity-1-extended-inline.png" alt="Специфичность inline-стиля с !important 1,0,0,0,0,0 (100000)" />
+            </p>
+            <h5>Советы по использованию !important</h5>
+            <ul>
+                <li>Всегда пробуйте использовать "вес селекторо" (специфичность) перед тем как принять решение добавить !important.</li>
+                <li>Использование !important оправдано, когда переопределяются стили сторонних библиотек (Bootstrap, normalize.css).</li>
+                <li>Избегайте использования !important при написании плагинов.</li>
+                <li>Избегайте использования !important в CSS кроме исключительных случаев.</li>
+            </ul>
+            <h4>Прямое обращение к элементу против глобальных стилей</h4>
+            <p>Селектор обращающийся к самому элементу всегда выигрывает у селектора относящегося к его родителям.</p>
+            <p>Если заданы стили не для самого элемента а для его родителя, даже с !important, выиграет селектор относящийся к самому элементу:</p>
+            <p data-height="181" data-theme-id="0" data-slug-hash="QKKGBb" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/QKKGBb/">direct vs. inherit</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p
         </section>
 
         <aside id="sidebar">
@@ -218,5 +622,7 @@
 <script src="javascripts/highlight/highlight.pack.js"></script>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
+<script src="javascripts/main.js"></script>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 </body>
 </html>
