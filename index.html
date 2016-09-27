@@ -49,7 +49,25 @@
                 <li><b>Шрифты</b> &mdash; в папке <b>fonts</b>.</li>
                 <li><b>Сторонние библиотеки</b> в папке <b>vendor</b></li>
             </ul>
-
+            <p>
+                Давайте применим эту структуру к нашей предыдущей вёрстке.
+            </p>
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Создать новую папку на рабочем столе с названием <b>project</b>.</li>
+                    <li>Скопировать в эту папку файлы с предыдущего занятия (<b>index.html</b>, <b>styles.css</b>). Если в текущей версии у вас есть заглавные буквы &mdash; переименуйте их в строчные.</li>
+                    <li>Создать в новой папке <b>project</b> подпапки <b>css</b> и <b>img</b>.</li>
+                    <li>Скопировать в подпапку <b>css</b> свой <b>styles.css</b> файл и переименовать его в <b>main.css</b>. Открыть <b>index.html</b> и обновить путь к стилям:<br />
+                        было <code class="html">&lt;link rel="stylesheet" href="styles.css" /&gt;</code>
+                        <br /> должно стать: <code class="html">&lt;link rel="stylesheet" href="<b>css/main.css</b>" /&gt;</code>.</li>
+                    <li>
+                        Изображение скопировать в подпапку <b>img</b> и обновить путь к нему:<br />
+                        был путь <code class="html">&lt;img src="logo.svg" .../&gt;</code><br /> должен стать <code class="html">&lt;img src="<b>img/</b>logo.svg" .../&gt;</code>.<br />
+                        (Если ссылка на изображение была абсолютной, скопируйте изображение и сделайте путь к нему относительным)
+                    </li>
+                </ol>
+            </div>
             <h4>Примеры структур популярных проектов</h4>
             <h5>HTML5 boilerplate</h5>
             <img src="images/structure-html5-boilerplate.png" alt="Корень папки проекта H5Bp" style="float: right; max-width: 70%; margin-left: 2rem;" />

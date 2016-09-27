@@ -1136,4 +1136,6 @@ body {
 .bad * {
     color: red !important;
 }
-
+.task h3:before {
+    display: none;
+}
