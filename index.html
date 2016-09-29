@@ -38,7 +38,7 @@
                 Файловая структура проекта
             </h3>
             <p>Для лучшей поддержки кода проекта необходима понятная и очевидная файловая структура, необходимо логически разделять файлы которые используются в веб-странице. <br />Понятная структура проекта обеспечивает легкость поддержки и масштабирования.</p>
-            <h4>Лучшие практики формирования файловой структуре проекта:</h4>
+            <h4>Лучшие практики формирования файловой структуры проекта:</h4>
             <ul>
                 <li>Все файлы посвященные проекту должны размещаться в папке с названием проекта.</li>
                 <li>Общее правило &mdash; по возможности все файлы одного типа группировать в папку.</li>
@@ -114,8 +114,39 @@
             </div>
             <h5>Favicon</h5>
             <p>
-                <b>Favicon</b> &mdash; иконка
+                <b>Favicon</b> &mdash; фавинка, значок сайта, обычно размером 16×16 пикселей в формате ICO. Это то что вы видите на фкладке браузера в левом верхнем углу. <a href="http://iconhandbook.co.uk/reference/examples/favicons/">Существует большое количество значков</a> для различных браузеров и типов устройств.
             </p>
+            <blockquote>
+                <b>Инструмент</b>
+                Существует веб-сервисы генерирующие из одного большого квадратного изображения другие форматы favicon:
+                <ul>
+                    <li><a href="http://realfavicongenerator.net/">http://realfavicongenerator.net</a></li>
+                    <li><a href="http://www.favicon-generator.org/">http://www.favicon-generator.org</a></li>
+                </ul>
+            </blockquote>
+            <p>
+                Самый простой вариант иконки в формате ICO, по умолчанию этот файл размещается в корне сайта &mdash; браузеры автоматически пытаются загрузить этот значок по адресу<br /> <b>адрес-сайта.com/favicon.ico</b>.
+            </p>
+            <p>
+                Для добавления ссылки на <b>favicon</b> в явном виде в HTML-код страницы используется мета тег, размещённый в элементе <b>head</b>:
+            </p>
+<pre><code class="html">&lt;link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /&gt;</code></pre>
+
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Скачать иконку <a href="http://spalah.ua/favicon.ico">http://spalah.ua/favicon.ico</a>.</li>
+                    <li>
+                        Разместить её в корне папки <b>project</b>.
+                        <p>Обновлённая структура:</p>
+                        <img src="images/sturcture-favicon.png" alt="Структура с добавленной favicon" />
+                    </li>
+                    <li>Добавить код подключения <b>favicon</b> в <b>index.html</b> с относительной ссылкой.</li>
+                    <li>Обновить страницу в браузере:<br />
+                        <img src="images/page-favicon.png" alt="Страница с favicon" />
+                    </li>
+                </ol>
+            </div>
             <h4>
                 Структура стилей в CSS-файле
             </h4>
@@ -126,6 +157,169 @@
                 <li>Далее добавляются стили отдельных компонентов.</li>
                 <li>Последними идут стили для печатающих устройств.</li>
             </ul>
+            <h2>CSS: объединение, наследование и сложные селекторы</h2>
+            <h3>
+                Объединение CSS-селекторов, наследование свойств
+            </h3>
+            <h4>Объединение свойств</h4>
+            <p>
+                Несколько CSS-селекторов с одинаковыми свойствами нужно объединять, перечислив их через запятую:
+            </p>
+            <p data-height="347" data-theme-id="0" data-slug-hash="JRyKNY" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/JRyKNY/">grouping CSS selectors</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <h4>Наследование CSS-свойств</h4>
+            <p>
+                <b>Только часть CSS-свойств наследуется</b> от родителя, потому что свойства, такие как цвет фона, размеры, отступы, рамки должны быть специфическими.
+            </p>
+            <h5>Список наследуемых от родителя CSS-свойств:</h5>
+            <ul class="multi-col">
+                <li>azimuth</li>
+                <li>border-collapse</li>
+                <li>border-spacing</li>
+                <li>caption-side</li>
+                <li>color</li>
+                <li>cursor</li>
+                <li>direction</li>
+                <li>elevation</li>
+                <li>empty-cells</li>
+                <li>font-family</li>
+                <li>font-size</li>
+                <li>font-style</li>
+                <li>font-variant</li>
+                <li>font-weight</li>
+                <li>font</li>
+                <li>letter-spacing</li>
+                <li>line-height</li>
+                <li>list-style-image</li>
+                <li>list-style-position</li>
+                <li>list-style-type</li>
+                <li>list-style</li>
+                <li>orphans</li>
+                <li>pitch-range</li>
+                <li>pitch</li>
+                <li>quotes</li>
+                <li>richness</li>
+                <li>speak-header</li>
+                <li>speak-numeral</li>
+                <li>speak-punctuation</li>
+                <li>speak</li>
+                <li>speech-rate</li>
+                <li>stress</li>
+                <li>text-align</li>
+                <li>text-indent</li>
+                <li>text-transform</li>
+                <li>visibility</li>
+                <li>voice-family</li>
+                <li>volume</li>
+                <li>white-space</li>
+                <li>widows</li>
+                <li>word-spacing</li>
+            </ul>
+            <blockquote>
+                <b>Особенность</b>
+                Для проверки наследуется (inherited) ли свойство используйте справочники:
+                <ul>
+                    <li><a href="https://www.w3.org/Style/CSS/all-properties.en.html">https://www.w3.org/Style/CSS/all-properties.en.html</a> &mdash; официальные спецификации W3.</li>
+                    <li><a href="https://developer.mozilla.org/ru/docs/Web/CSS/Reference">Справочник от Mozilla</a>.</li>
+                    <li><a href="https://webref.ru/css">Справочник CSS (WebReference.ru)</a>.</li>
+                </ul>
+            </blockquote>
+
+            <h3>
+                Сложные CSS-cелекторы (complex selectors)
+            </h3>
+            <h4>Селектор потомка (контекстный селектор, descendant selector)</h4>
+            <h4>Вложенность</h4>
+            <p>
+                В HTML мы имеем дело с вложенными структурами &mdash; простейший пример списки. Можно испоьзовать <b>селектор потомка</b> (контекстный селектор) для обращения к вложенному элементу.
+            </p>
+            <blockquote>
+                <b>Синтаксис</b>
+                селектор_<strong>родитель</strong> <strong>потомок</strong> { ... }<br />
+                селектор_<strong>дедушка</strong> <strong>отец</strong> <strong>ребенок</strong> { ... }<br />
+                селектор_<strong>прабабушка</strong> <strong>бабушка</strong><br /> <strong>мама</strong> <strong>ребенок</strong> { ... }
+            </blockquote>
+            <p data-height="300" data-theme-id="0" data-slug-hash="KgvrxE" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/KgvrxE/">CSS and HTML nesting</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <blockquote>
+                <b>Особенность</b>
+                Максимальная рекомендуемая вложенность 3-4 селектора, при большем их количестве начинаются проблемы с быстродействием браузера.
+            </blockquote>
+            <h4>Универсальный селектор (*, universal selector)</h4>
+            <p>
+                Используя универсальный селектор («звездочка») <b>*</b> можно выбрать все элементы. Его можно использовать глобально, чтобы примениь какой-то стиль ко всем элементам. Либо добавлять его после основного селектора, чтобы применить какое-то свойство к дочерним элементам.
+            </p>
+            <h5>Универсальный селектор для всех элементов</h5>
+            <p data-height="396" data-theme-id="0" data-slug-hash="Xjadjq" data-default-tab="css,result" data-editable="true"  data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/Xjadjq/">universal selector</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <h5>Универсальный селектор для дочерних элементов</h5>
+            <p data-height="317" data-theme-id="0" data-slug-hash="VKzaPO" data-default-tab="html,result" data-editable="true"  data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/VKzaPO/">universal selector for child elements</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <blockquote>
+                <b>Особенность</b>
+                Если используется универсальный селектор для дочерних элементов, то он будет применяться так же и для всех элементов вложенных в дочерний элемент.
+            </blockquote>
+            <p data-height="361" data-theme-id="0" data-slug-hash="PGKNjk" data-default-tab="html,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/PGKNjk/">universal selector for child sub elements</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <p>
+                До появления таблиц для сброса стилей <b><a href="http://meyerweb.com/eric/tools/css/reset/">reset.css</a></b> (Eric Meyer) и <b><a href="https://necolas.github.io/normalize.css/">normalize.css</a></b> (Nicolas Gallagher и Jonathan Neal),  для сброса стилей использовали универсальный селектор:
+            </p>
+            <p data-height="295" data-theme-id="0" data-slug-hash="ZpJWqr" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/ZpJWqr/">universal selector reset of styles</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <p>
+                Обнуление отступов элементо позволяет не переопределять каждый отступ согласно дизайну.
+            </p>
+            <h5><a href="http://meyerweb.com/eric/tools/css/reset/">reset.css</a></h5>
+            <p>
+                Более совершенный способ обнуления в том числе и размеров шрифта.
+            </p>
+            <p data-height="358" data-theme-id="0" data-slug-hash="YGxqdX" data-default-tab="html,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/YGxqdX/">reset.css</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <h5><a href="https://necolas.github.io/normalize.css/">normalize.css</a></h5>
+            <p>
+                <strong>Рекомендуется подключать эту таблицу стилей перед началом работы.</strong> Задаёт вид элементов одинаковым во всех браузерах.
+            </p>
+            <p data-height="365" data-theme-id="0" data-slug-hash="VKzagL" data-default-tab="html,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/VKzagL/">normalize.css</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Скачать файл <b><a href="https://necolas.github.io/normalize.css/">normalize.css</a></b>.</li>
+                    <li>В папке <b>project</b> создать подпапку <b>vendor</b> и в ней папку <b>normalize</b>.</li>
+                    <li>Скопировать в подпапку <b>normalize</b> файл <b>normalize.css</b>.
+                        <p>Структура проекта должна стать такой:</p>
+                        <img src="images/structure-normalize.png" alt="В проект добавлен normalize.css" />
+                    </li>
+                    <li>В <b>index.html</b> подключить таблицу стилей <b>normalize.css</b> перед своей таблицей стилей.
+<pre><code class="html">...
+    &lt;link rel="stylesheet" href="vendor/normalize/normalize.css" /&gt;
+    &lt;link rel="stylesheet" href="css/main.css" /&gt;
+    ...
+</code></pre>
+                    </li>
+                    <li>Обновить страницу в браузере.</li>
+                </ol>
+            </div>
+            <h4>Селектор непосредственного потомка (дочерний, child selector)</h4>
+            <p>
+                Для указания элемента который непосредственно вложен в родителя используется селектор <b>непосредственного потомка</b> &mdash; символ <code class="css">&gt;</code>. Дочерний элемент это элемент обозначенный тегом идущим <b>сразу после открывающего родительского</b> тега.
+            </p>
+            <blockquote>
+                <b>Синтаксис</b>
+                селектор <strong>&gt;</strong> непосредственно_дочерний { ... }
+            </blockquote>
+            <p>В этом примере мы добавили рамку (border) снизу только элементам списка первого уровня:</p>
+            <p data-height="265" data-theme-id="0" data-slug-hash="XjajbK" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/XjajbK/">CSS and HTML nesting</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <h4>Селектор соседства (general sibling selector)</h4>
+            <p>
+                В CSS3 можно выбирать соседние элементы селектором соседства &mdash; символ <code class="css">~</code>. При этом выбирается любой соседский элемент (находящийся на одном уровне вложенности) идущий <b>после</b> элемента выбранного первым селектором.
+            </p>
+            <blockquote>
+                <b>Синтаксис</b>
+                селектор <strong>~</strong> соседский_селектор { ... }
+            </blockquote>
+            <p data-height="164" data-theme-id="0" data-slug-hash="xELRVa" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/xELRVa/">CSS General sibling selector</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <h4>Селектор непосредственного соседства (соседский, adjacent sibling selector)</h4>
+            <p>
+                В CSS3 так же можно выбирать непосредственно соседский элемент &mdash; символ <code class="css">+</code>. При этом выбирается соседский элемент идущий <b>сразу после</b> элемента выбранного первым селектором.
+            </p>
+            <blockquote>
+                <b>Синтаксис</b>
+                селектор <strong>+</strong> ближайший_сосед { ... }
+            </blockquote>
+            <p data-height="172" data-theme-id="0" data-slug-hash="vXJyWY" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/vXJyWY/">CSS Adjacent sibling selector</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             <h2>
                 <a id="validation" class="anchor" href="#validation" aria-hidden="true"><span aria-hidden="true"
                                                                                   class="octicon octicon-link"></span>Валидность кода</a>
@@ -633,6 +827,18 @@
             <p>Селектор обращающийся к самому элементу всегда выигрывает у селектора относящегося к его родителям.</p>
             <p>Если заданы стили не для самого элемента а для его родителя, даже с !important, выиграет селектор относящийся к самому элементу:</p>
             <p data-height="181" data-theme-id="0" data-slug-hash="QKKGBb" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/QKKGBb/">direct vs. inherit</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p
+
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Пройти курс <b>Структура HTML-документа</b> весь.</li>
+                    <li>Пройти курс <b>Селекторы</b> (первую часть) <b>до дочерних селекторов (первые 8 заданий)</b>.</li>
+                    <li>Пройти курс <b>Наследование и каскадирование</b>.</li>
+                    <li>Пройти курс <b>Фоны</b> (первую часть) <b>до эффектов с повторяющимся фоном</b>.</li>
+                    <li>Отправить мне ссылку на свой профиль.</li>
+                </ol>
+            </div>
+
         </section>
 
         <aside id="sidebar">
