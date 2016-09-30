@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
@@ -128,9 +127,9 @@
                 Самый простой вариант иконки в формате ICO, по умолчанию этот файл размещается в корне сайта &mdash; браузеры автоматически пытаются загрузить этот значок по адресу<br /> <b>адрес-сайта.com/favicon.ico</b>.
             </p>
             <p>
-                Для добавления ссылки на <b>favicon</b> в явном виде в HTML-код страницы используется мета тег, размещённый в элементе <b>head</b>:
+                Для добавления ссылки на <b>favicon</b> в явном виде в HTML-код страницы используется мета-тег, размещённый в элементе <b>head</b>:
             </p>
-<pre><code class="html">&lt;link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /&gt;</code></pre>
+            <pre><code class="html">&lt;link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /&gt;</code></pre>
 
             <div class="task">
                 <h3>Задание</h3>
@@ -147,7 +146,9 @@
                     </li>
                 </ol>
             </div>
+
             <h4>
+
                 Структура стилей в CSS-файле
             </h4>
             <p>Вариант структуры в файле со стилями:</p>
@@ -320,12 +321,48 @@
                 селектор <strong>+</strong> ближайший_сосед { ... }
             </blockquote>
             <p data-height="172" data-theme-id="0" data-slug-hash="vXJyWY" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/vXJyWY/">CSS Adjacent sibling selector</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+            <h5>Немного SEO: ключевые слова и описание содержания страницы</h5>
+            <p>
+                Разработчики поисковых систем периодически меняют свои алгоритмы, но в любом случае для <b>S</b>earch <b>E</b>gine <b>O</b>ptimization не лишним будет добавить полезное содержание видимое только для поисковых роботов.
+            </p>
+            <h6>Ключевые слова</h6>
+            <p>
+                В HTML странице можно указать ключевые слова, характерные для контента этой страницы &mdash; это слова, наиболее ясно описывающие страницу и повторяющиеся в тексте страницы несколько раз.
+            </p>
+            <p>
+                Чтобы задать ключевые слова используется meta-тег с названием <b>keywords</b>, содержащий в атрибуте <b>content</b> ключевые слова, перечисленные через запятую.
+            </p>
+            <p>Как и все meta-теги, этот meta-тег размещается в элементе <b>head</b>:</p>
+<pre><code class="html">&lt;head&gt;
+    ...
+    &lt;meta name="keywords" content="ключевое слово, ключевая фраза, словосочетание" /&gt;
+    ...
+&lt;/head&gt;</code></pre>
+            <h6>Описание содержания страницы</h6>
+            <p>
+                В HTML странице можно указать описание содержания страницы с помощью meta-тега с названием <b>description</b> (описание), который содержащит в атрибуте <b>content</b> текст описывающий веб-страницу.
+            </p>
+            <p>Как и все meta-теги, этот meta-тег размещается в элементе <b>head</b>:</p>
+<pre><code class="html">&lt;head&gt;
+    ...
+    &lt;meta name="description" content="описание страницы появляющееся в результатах поиска" /&gt;
+    ...
+&lt;/head&gt;</code></pre>
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Открыть <b>index.html</b></li>
+                    <li>Добавить ключевые слова и описание страницы.</li>
+                    <li>Обновить страницу в браузере и проверить не сломалась ли она. Исправить код, если есть дефекты.</li>
+                </ol>
+            </div>
             <h2>
                 <a id="validation" class="anchor" href="#validation" aria-hidden="true"><span aria-hidden="true"
                                                                                   class="octicon octicon-link"></span>Валидность кода</a>
             </h2>
             <p>
-                <b>Валидность</b> &mdash; это правильность кода, это оценка соответствия кода стандартам описанным в спецификациях W3C.
+                <b>Валидность</b> &mdash; это правильность кода, это оценка соответствия кода стандартам описанным в спецификациях <a href="http://w3.org">W3C</a> (<b>W</b>orld <b>W</b>ide <b>W</b>eb Consorcium).
             </p>
             <p>
                 Чтобы выяснить, насколько код валиден, необходимо провести валидацию &mdash; проверку соответствия стандартам W3C с выявлением ошибок. Валидным будет код, который был проверен и не имеет замечаний.
@@ -343,7 +380,7 @@
             </p>
             <p>Существуют расширения браузеров и специализированные сервисы, позволяющие провалидировать код:</p>
             <ul>
-                <li><a href="http://validator.w3.org/">http://validator.w3.org/</a> &mdash; официальный валидатор HTML, XHTML, SVG-кода от W3 (Markup Validation Service).
+                <li><a href="http://validator.w3.org/">http://validator.w3.org/</a> &mdash; официальный валидатор HTML, XHTML, SVG-кода от W3C (Markup Validation Service).
                     <p>
                         Чтобы проверить HTML-документ можно:
                     </p>
@@ -368,9 +405,22 @@
                 <strong>Вывод:</strong><br />
                 Валидировать веб-страницы необходимо, но поддержка большего количества пользователей более важна.
             </blockquote>
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Открыть <b>index.html</b></li>
+                    <li>Скопировать в буфер обмена весь HTML-код страницы.</li>
+                    <li>Зайти на страницу сервиса W3C валидирующего HTML-код &mdash; <a href="https://validator.w3.org/#validate_by_input">https://validator.w3.org/#validate_by_input</a>, вставить свой код и нажать кнопку "Check" чтобы запустить проверку кода.<br />
+                        <img src="images/validate-html.png" alt="Проверить валидность HTML-кода" />
+                    </li>
+                    <li>Исправить код, если есть дефекты и проверить его снова, до получения сообщения о валидности.<br />
+                        <img src="images/validate-html-no-warnings.png" alt="Сообщение о том, что HTML-код валиден" />
+                    </li>
+                </ol>
+            </div>
             <h3>Валидность CSS-кода</h3>
             <p>
-                Валидность CSS-кода проверяется на соответствие спецификации CSS2.1 или CSS3.
+                Валидность CSS-кода &mdash; это результат проверки CSS-кода на соответствие спецификации CSS2.1 или CSS3.
             </p>
             <p>
                 Как и с HTML-кодом, проверка CSS-кода позволяет выявить грубые ошибки, которые браузер, как правило, игнорирует &mdash; неправильное значение либо свойство не применится к элементу и будет пропущено. В некоторых случаях <b>незакрытое правило вызовет глобальное применение стилей для всех элементов</b>, например весь текст на странице станет красным, хотя красным должно было быть только сообщение об ошибке.
@@ -379,7 +429,7 @@
                 Сервисы для проверки CSS-кода:
             </p>
             <ul>
-                <li><a href="http://jigsaw.w3.org/css-validator/validator.html.ru">http://jigsaw.w3.org/css-validator/</a> &mdash; официальный валидатор CSS-кода от W3 (CSS Validation Service).
+                <li><a href="http://jigsaw.w3.org/css-validator/validator.html.ru">http://jigsaw.w3.org/css-validator/</a> &mdash; официальный валидатор CSS-кода от W3C (CSS Validation Service).
                     <p>
                         Чтобы проверить CSS можно:
                     </p>
@@ -391,6 +441,21 @@
                     Дополнительно можно указать профиль: CSS2.1, CSS3 и другие.
                 </li>
             </ul>
+
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Открыть <b>main.css</b></li>
+                    <li>Скопировать в буфер обмена весь CSS-код вашей таблицы стилей.</li>
+                    <li>Зайти на страницу сервиса W3С валидирующего HTML-код &mdash; <a href="https://jigsaw.w3.org/css-validator/validator.html.ru#validate_by_input">https://jigsaw.w3.org/css-validator/validator.html.ru#validate_by_input</a>, вставить свой код и нажать кнопку "Проверить" чтобы запустить проверку кода.<br />
+                        <img src="images/validate-css.png" alt="Проверить валидность CSS-кода" />
+                    </li>
+                    <li>Исправить код, если есть дефекты и проверить его снова, до получения сообщения о валидности.<br />
+                        <img src="images/validate-css-no-warnings.png" alt="Сообщение о том, что CSS-код валиден" />
+                    </li>
+                </ol>
+            </div>
+
             <h2>
                 <a id="box-model" class="anchor" href="box-model" aria-hidden="true"><span aria-hidden="true"
                                                                                   class="octicon octicon-link"></span>Блочная модель</a>
@@ -508,10 +573,45 @@
                     <div class="box-content-en">&nbsp;</div>
                 </div>
             </div>
-            </p>
             <p>
                 Блочная модель может применяться к любому блочному элементу веб-страницы и к остальным элементам с некоторыми особенностями.
             </p>
+            <h3>Размеры</h3>
+            <p>
+                Для блочного элемента в CSS задаются размеры с помощью свойств <b>width</b> (ширина) и <b>height</b> (высота):
+            </p>
+            <p data-height="178" data-theme-id="0" data-slug-hash="mArgva" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/mArgva/">Block with sizes</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <blockquote>
+                <b>Особенность</b>
+                Если высота (height) задана для элемента в процентах и для элемента не задано свойство <strong>position</strong> на <strong>absolute</strong> или <strong>fixed</strong>, <strong>высота остаётся прежней</strong>!
+            </blockquote>
+            <h4>Минимальные и максимальные размеры</h4>
+            <p>
+                Для элемента можно задавать минимальные и максимальыне размеры:
+            </p>
+            <ul>
+                <li><b>min-width</b> &mdash; минимальная ширина (блок не уменьшится меньше этого размера, даже если не будет достаточно места в доступной области страницы).</li>
+                <li><b>max-width</b> &mdash; максимальная ширина (блок не растянется шире этого значения).</li>
+                <li><b>min-height</b> &mdash; минимальная высота.</li>
+                <li><b>max-height</b> &mdash; максимальная высота.</li>
+            </ul>
+            <p data-height="265" data-theme-id="0" data-slug-hash="YGxrbJ" data-default-tab="html,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/YGxrbJ/">Block with min sizes</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <p>
+                Если уменьшить окно браузера так, чтобы элемент не вмещался по ширине или высоте, в браузере появятся полосы прокрутки.
+            </p>
+            <p>
+                Если контент не влазит в блок он визуально "выпадает" из блока, при этом размеры блока остаются те же:
+            </p>
+            <p data-height="368" data-theme-id="0" data-slug-hash="WGEBAw" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/WGEBAw/">Block with min and max sizes</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <blockquote>
+                <b>Вывод</b>
+                Элементы веб-страницы тянутся по высоте (кроме элементов форм). Стоит избегать задавания высоты для элементов, кроме отдельных случаев.
+            </blockquote>
+            <p>
+                При заданной ширине элемент можно вырванивать по горизонтали используя свойство <b>margin</b> со значениями <b>auto</b>:
+            </p>
+            <p data-height="497" data-theme-id="0" data-slug-hash="jrLoxw" data-default-tab="html,result" data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/jrLoxw/">Block with size and margin auto</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
             <h3>Рамки</h3>
             <p>Рамки могут применяться к большинству HTML элементов внутри элемента <b>body</b>.</p>
             <h4>border-style</h4>
@@ -644,9 +744,15 @@
             <p>
                 Для правильного форматирования рекомендуется использовать файл .editorconfig в вашем редакторе. В этом файле размещаются настройки форматирования кода редактора.
             </p>
+            <blockquote>
+                <b>О проекте .editorconfig</b>
+                Можно больше узнать на официальном сайте <a href="http://editorconfig.org/">EditorConfig</a>.
+            </blockquote>
             <h3>Примеры стилей кода:</h3>
             <ul>
                 <li><a href="http://html-academy.ru/codeguide/">Стиль кода Академии HTML</a></li>
+                <li><a href="https://google.github.io/styleguide/htmlcssguide.xml">Google</a></li>
+                <li><a href="http://codeguide.co/">Code Guide by @mdo (от создателя Bootstrap)</a></li>
             </ul>
             <h3>Язык и кодировка</h3>
             <p>Рекомендуется всегда использовать кодировку символов <b>utf-8</b>. Кодировка задается в элементе <b>head</b> с помощью элемента <b>meta</b> с атрибутом <b>charset</b> равному <b>utf-8</b>:</p>
@@ -746,9 +852,56 @@
                 Избегать селектор по <b>id</b> так где это возможно.
             </p>
             <p>
-                Везде, там где это возможно, следует стараться использовать имя класса как селектор.<br />
+                Везде, там где это возможно, следует стараться использовать имя класса как селектор (вместо id).<br />
                 <code class="css">.class-name { padding: 10px; }</code>
             </p>
+            <blockquote>
+                <b>К прочтению</b>
+                Превосходные рекомендации содержатся в документе <a href="https://github.com/necolas/idiomatic-css/tree/master/translations/ru-RU">Принципы написания однородного CSS-кода</a>.
+            </blockquote>
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Открыть редактор кода <b>Sublime</b>. У кого не установлен &mdash; <a href="https://www.sublimetext.com/">скачать</a> и установить <b>Package Control</b>,<br />
+                        <img src="images/sublime-install-package-control.png" alt="Установить Package Control" />
+                        <br />
+                        у кого уже установлено перейти к следующему шагу.
+                    </li>
+                    <li>
+                        Зайти в <b>Preferences</b> и выбрать <b>Package Control</b><br />
+                        <img src="images/sublime-run-package-control.png" alt="Запустить Package Control" />
+                    </li>
+                    <li>
+                        Нажать <b>Install Package</b><br />
+                        <img src="images/sublime-run-package-control-install-package.png" alt="Установить пакет" />
+                    </li>
+                    <li>
+                        Ввести <b>editorconfig</b>, выбрать пакет <b>EditorConfig</b> и нажать <b>Enter</b>.
+                    </li>
+                    <li>
+                        Скачать <a href=""><b>HTML5Boilerplate</b></a><br />
+                        <img src="images/html5boilerplate-download.png" alt="Скачать HTML5Boilerplate" />
+                    </li>
+                    <li>Разархивировать файлы, и скопировать в буфер из корня папки файл <b>.editorconfig</b><br />
+                        <img src="images/editorconfig.png" alt="Скопировать editorconfig" />
+                    </li>
+                    <li>
+                        Вставить файл в корень папки <b>project</b>.
+                    </li>
+                    <li>
+                        Открыть папку <strong>project</strong> в редакторе Sublime:<br />
+                        <img src="images/sublime-open-folder.png" alt="Открыть папку" />
+                    </li>
+                    <li>
+                        Открыть HTML-файл <strong>index.html</strong> выделить весь код и нажать <b>Edit</b> затем <b>Line</b> и <strong>Reindent</strong>.<br />
+                        <img src="images/sublime-reindent.png" alt="Отформатировать код" />
+                    </li>
+                    <li>Сделать то же самое для CSS.
+                        Попробовать добавить новое CSS правило и убедиться что при нажатии клавиши <strong>Tab</strong> формируется отступ из четырёх пробелов.
+                        Если в какой-то строке выставлен отступ в два пробела, стоит попробовать удалить их и затем нажать клавишу <strong>Tab</strong>. </li>
+                </ol>
+            </div>
+
             <h2>
                 <a id="selectors-weight" class="anchor" href="selectors-weight" aria-hidden="true"><span aria-hidden="true"
                                                                                   class="octicon octicon-link"></span>“Вес селекторов”</a>
@@ -761,19 +914,19 @@
                     Теги в качестве селекторов:<br />
                     <pre><code class="css">body {
     color: grey;
-}</pre></code>
+}</code></pre>
                 </li>
                 <li>CSS-класс добавляется с помощью атрибута <b>class</b> значением которого является имя класса:<br />
                     <code class="html">&lt;p <b>class="primary-color"</b>&gt;Текст с основным цветом&lt;/p&gt;</code> к этому параграфу можно обратиться используя селектор CSS-класс (добавляется точка перед именем класса):
                     <pre><code class="css">.primary-color {
     color: blue;
-}</pre></code>
+}</code></pre>
                 </li>
                 <li>ID добавляется с помощью атрибута <b>id</b> значением которого является имя идентификатор:<br />
                     <code class="html">&lt;h1 <b>id="main-headline"</b>&gt;Основной заголовок&lt;/p&gt;</code> к этому заголовку можно обратиться используя селектор <b>id</b> (добавляется <b>#</b> перед именем класса):
                     <pre><code class="css">#main-headline {
     font-size: 2rem;
-}</pre></code></li>
+}</code></pre></li>
             </ul>
             <p>Если у нас несколько правил и селекторы имеют одинаковый вес, выигрывает селектор идущий ниже по коду:</p>
             <p data-height="180" data-theme-id="0" data-slug-hash="kkkWPP" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/kkkWPP/">equal specificity of selectors</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
@@ -826,7 +979,7 @@
             <h4>Прямое обращение к элементу против глобальных стилей</h4>
             <p>Селектор обращающийся к самому элементу всегда выигрывает у селектора относящегося к его родителям.</p>
             <p>Если заданы стили не для самого элемента а для его родителя, даже с !important, выиграет селектор относящийся к самому элементу:</p>
-            <p data-height="181" data-theme-id="0" data-slug-hash="QKKGBb" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/QKKGBb/">direct vs. inherit</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p
+            <p data-height="181" data-theme-id="0" data-slug-hash="QKKGBb" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/QKKGBb/">direct vs. inherit</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
             <div class="task">
                 <h3>Задание</h3>
