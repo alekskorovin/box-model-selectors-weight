@@ -46,11 +46,8 @@
                 <li><b>JS-файлы</b> &mdash; в папке <b>js</b>. Основной JS-файл рекомендуется называть <b>main.js</b>, <b>app.js</b>, <b>master.js</b>.</li>
                 <li><b>Изображения</b> &mdash; в папке <b>img</b> или <b>images</b>, где можно создать подпапку <b>svg</b> для векторных изображений.</li>
                 <li><b>Шрифты</b> &mdash; в папке <b>fonts</b>.</li>
-                <li><b>Сторонние библиотеки</b> в папке <b>vendor</b></li>
+                <li><b>Сторонние библиотеки</b> в папке <b>vendor</b>.</li>
             </ul>
-            <p>
-                Давайте применим эту структуру к нашей предыдущей вёрстке.
-            </p>
             <h4>Примеры структур популярных проектов</h4>
             <h5><a href="https://html5boilerplate.com/">HTML5 boilerplate</a></h5>
             <img src="images/structure-html5-boilerplate.png" alt="Корень папки проекта H5Bp" style="float: right; max-width: 70%; margin-left: 2rem;" />
@@ -90,6 +87,9 @@
             </blockquote>
             <p>Вариант структуры проекта, включающей общепринятые практики:</p>
             <p>Структура может зависеть от специфики проекта, поэтому может отличаться от рассмотренных вариантов.</p>
+            <p>
+                Давайте применим вариант структуры к нашей предыдущей вёрстке.
+            </p>
             <div class="task">
                 <h3>Задание</h3>
                 <ol>
@@ -249,20 +249,20 @@
                 Используя универсальный селектор («звездочка») <b>*</b> можно выбрать все элементы. Его можно использовать глобально, чтобы примениь какой-то стиль ко всем элементам. Либо добавлять его после основного селектора, чтобы применить какое-то свойство к дочерним элементам.
             </p>
             <h5>Универсальный селектор для всех элементов</h5>
-            <p data-height="396" data-theme-id="0" data-slug-hash="Xjadjq" data-default-tab="css,result" data-editable="true"  data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/Xjadjq/">universal selector</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <p data-height="436" data-theme-id="0" data-slug-hash="Xjadjq" data-default-tab="css,result" data-editable="true"  data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/Xjadjq/">universal selector</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             <h5>Универсальный селектор для дочерних элементов</h5>
-            <p data-height="317" data-theme-id="0" data-slug-hash="VKzaPO" data-default-tab="html,result" data-editable="true"  data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/VKzaPO/">universal selector for child elements</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <p data-height="400" data-theme-id="0" data-slug-hash="VKzaPO" data-default-tab="css,result" data-editable="true"  data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/VKzaPO/">universal selector for child elements</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             <blockquote>
                 <b>Особенность</b>
                 Если используется универсальный селектор для дочерних элементов, то он будет применяться так же и для всех элементов вложенных в дочерний элемент.
             </blockquote>
-            <p data-height="361" data-theme-id="0" data-slug-hash="PGKNjk" data-default-tab="html,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/PGKNjk/">universal selector for child sub elements</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <p data-height="400" data-theme-id="0" data-slug-hash="PGKNjk" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/PGKNjk/">universal selector for child sub elements</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             <p>
                 До появления таблиц для сброса стилей <b><a href="http://meyerweb.com/eric/tools/css/reset/">reset.css</a></b> (Eric Meyer) и <b><a href="https://necolas.github.io/normalize.css/">normalize.css</a></b> (Nicolas Gallagher и Jonathan Neal),  для сброса стилей использовали универсальный селектор:
             </p>
             <p data-height="295" data-theme-id="0" data-slug-hash="ZpJWqr" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/ZpJWqr/">universal selector reset of styles</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             <p>
-                Обнуление отступов элементо позволяет не переопределять каждый отступ согласно дизайну.
+                Обнуление отступов элементов позволяет не переопределять каждый отступ согласно дизайну.
             </p>
             <h5><a href="http://meyerweb.com/eric/tools/css/reset/">reset.css</a></h5>
             <p>
@@ -277,6 +277,7 @@
             <div class="task">
                 <h3>Задание</h3>
                 <ol>
+                    <li>Открыть свою страницу в браузере Firefox и Chrome, обратить внимание на разницу в стилях.</li>
                     <li>Скачать файл <b><a href="https://necolas.github.io/normalize.css/">normalize.css</a></b>.</li>
                     <li>В папке <b>project</b> создать подпапку <b>vendor</b> и в ней папку <b>normalize</b>.</li>
                     <li>Скопировать в подпапку <b>normalize</b> файл <b>normalize.css</b>.
@@ -521,13 +522,16 @@
             <p>Задаёт внешний отступ:</p>
             <ul>
                 <li>Сверху и снизу по 10px</li>
-                <li>Слева и справа по 10px</li>
+                <li>Слева и справа по 20px</li>
             </ul>
             <blockquote>
                 <b>Особенность:</b>
                 Вертикальные внешние отступы <strong>margin-top</strong> и <strong>margin-bottom</strong> "схлопываются" (так же если заданы через сокращённую форму записи: margin).<br />
                 Горизонтальные внешние отступы ведут себя как положено.
             </blockquote>
+            <p>
+                Более детально схлопывание внешних отступов рассмотрено в статье <a href="http://htmlbook.ru/samlayout/blochnaya-verstka/skhlopyvayushchiesya-otstupy">Схлопывающиеся отступы</a>.
+            </p>
             <p data-height="340" data-theme-id="0" data-slug-hash="zKBgPx" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/zKBgPx/">margin-top, margin-bottom</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             <p data-height="217" data-theme-id="0" data-slug-hash="JRKgpX" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/JRKgpX/">margin-left, margin-right</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             <hr />
@@ -602,16 +606,46 @@
             <p>
                 Если контент не влазит в блок он визуально "выпадает" из блока, при этом размеры блока остаются те же:
             </p>
-            <p data-height="368" data-theme-id="0" data-slug-hash="WGEBAw" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/WGEBAw/">Block with min and max sizes</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <p data-height="420" data-theme-id="0" data-slug-hash="WGEBAw" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/WGEBAw/">Block with min and max sizes</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             <blockquote>
                 <b>Вывод</b>
                 Элементы веб-страницы тянутся по высоте (кроме элементов форм). Стоит избегать задавания высоты для элементов, кроме отдельных случаев.
             </blockquote>
             <p>
-                При заданной ширине элемент можно вырванивать по горизонтали используя свойство <b>margin</b> со значениями <b>auto</b>:
+                При заданной ширине элемент можно выравнивать по горизонтали используя свойство <b>margin</b> со значениями <b>auto</b>:
             </p>
-            <p data-height="497" data-theme-id="0" data-slug-hash="jrLoxw" data-default-tab="html,result" data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/jrLoxw/">Block with size and margin auto</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-
+            <p data-height="540" data-theme-id="0" data-slug-hash="jrLoxw" data-default-tab="html,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/jrLoxw/">Block with size and margin auto</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Открыть <b>index.html</b></li>
+                    <li>Обернуть все содержимое в элемент <b>div</b> с классом <b>container</b>.</li>
+                    <li>Открыть <b>main.css</b> и добавить стили:
+<pre><code class="css">.container {
+    max-width: 1140px;
+    margin: auto;
+    padding: 2rem;
+    background: #fff;
+}</code></pre>
+                    </li>
+                    <li>
+                        Обновить страницу в браузере &mdash; раскрыть её на всю ширину и сузить её до минимума &mdash; только что мы проверили адаптивность страницы, и в текущем варианте она почти адаптивна.
+                    </li>
+                    <li>
+                        Обратить внимание что изображение не сжимается при маленьком размере экрана.
+                    </li>
+                    <li>
+                        Добавить стиль для изображений:
+<pre><code class="css">img {
+    max-width: 100%;
+}
+</code></pre>
+                    </li>
+                    <li>
+                        Посмотреть на страницу в браузере ири минимальной ширине. <br />Обратить внимание что теперь изображение сжимается, его максимальная ширина равна ширине контейнера.
+                    </li>
+                </ol>
+            </div>
             <h3>Рамки</h3>
             <p>Рамки могут применяться к большинству HTML элементов внутри элемента <b>body</b>.</p>
             <h4>border-style</h4>
@@ -713,8 +747,16 @@
                 <b>border-color</b> используется для задания цвета рамки. Так же может задаваться в сокращённой форме записи и по отдельности для сторон элемента.
             </p>
             <p>
-                Можно использовать задавать разные свойства для сторон рамок по отдельности: <code class="css">border-top: solid 1px red;</code>.
+                Можно задавать разные свойства для разных сторон рамок по отдельности:<br /> <code class="css">border-top: solid 1px red;</code>.
             </p>
+            <p>
+                Можно использовать сокращённую форму записи <b>border</b>, задающую параметры рамки для всех сторон.
+            </p>
+            <blockquote>
+                <b>Синтаксис</b>
+                border: тип_рамки ширина_рамки цвет.
+            </blockquote>
+            <p data-height="154" data-theme-id="0" data-slug-hash="jrGmYy" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/jrGmYy/">border</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             <h4>border-radius</h4>
             <p>
                 <b>border-radius</b> позволяет задать радиус скругления. Это свойство не входит в сокращённую запись <b>border</b> и имеет собственную сокращенную форму записи <code class="css">border-radius: 10px 20px 30px 40px;</code>, и может задаваться отдельно для углов элемента:
@@ -726,6 +768,37 @@
                 <li><b>border-bottom-left-radius</b> &mdash; радиус скругления нижнего левого угла</li>
             </ul>
             <p data-height="337" data-theme-id="0" data-slug-hash="JRRPGJ" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/JRRPGJ/">border-radius shortcut</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Открыть <b>index.html</b></li>
+                    <li>Сделать несколько контейнеров которые обернут все ваши подзаголовки третьего уровня и идущий за ним абзац либо список (до следующего <b>h3</b>): добавив <b>div</b> с классом <b>box</b>, пример:
+<pre><code class="css">&lt;div class="box"&gt;
+    &lt;h3 class="headline"&gt;Любимый цвет&lt;/h3&gt;
+    &lt;p&gt;Мой любимый цвет &lt;strong&gt;зеленый&lt;/strong&gt; (&lt;em&gt;green&lt;/em&gt;).&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+                    </li>
+                    <li>Открыть <b>main.css</b> и добавить стили:
+<pre><code class="css">.box {
+    <b>border: solid 1px #ccc;</b>
+    <b>border-radius: 1rem;</b>
+    margin: 1rem 0;
+    padding: 0.25rem 2rem;
+    background: #eee;
+}</code></pre>
+                    </li>
+                    <li>
+                        Обновить страницу в браузере и глянуть все ли блоки содержат скруглённые углы.
+                    </li>
+                    <li>
+                        Давайте теперь для поддержания дизайна добавим <b>border-radius</b> с тем же значением для блока с CSS классом <b>container</b>.
+                    </li>
+                    <li>
+                        И изменим размер шрифта для элемента <b>body</b> в 2rem.
+                    </li>
+                </ol>
+            </div>
             <h2>
                 <a id="html-code-style" class="anchor" href="html-code-style" aria-hidden="true"><span aria-hidden="true"
                                                                                   class="octicon octicon-link"></span>Стиль кода HTML</a>
@@ -980,9 +1053,153 @@
             <p>Селектор обращающийся к самому элементу всегда выигрывает у селектора относящегося к его родителям.</p>
             <p>Если заданы стили не для самого элемента а для его родителя, даже с !important, выиграет селектор относящийся к самому элементу:</p>
             <p data-height="181" data-theme-id="0" data-slug-hash="QKKGBb" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/QKKGBb/">direct vs. inherit</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-
             <div class="task">
                 <h3>Задание</h3>
+                <ol>
+                    <li>
+                        Открыть <b>index.html</b> и добавить к элементу <b>body</b> класс <b>theme-maroon</b>.
+                    </li>
+                    <li>
+                        Открыть <b>main.css</b> и с помощью класса <b>theme-maroon</b> и универсального селектора сделать цвет текста всех элементов бардовым <b>maroon</b>.
+                    </li>
+                    <li>
+                        В <b>index.html</b> добавить к элементу <b>body</b> атрибут <b>id</b> со значением <b>body</b>.
+                    </li>
+                    <li>
+                        В  <b>main.css</b> используя селектор ID перекрасить все элементы в черный цвет.
+                    </li>
+                    <li>
+                        Для <b>h1</b> используя строчный стиль (inline style) перекрасить заголовок в <b>#6dc6a9</b>.
+                    </li>
+                    <li>
+                        Задать цвет для текста <b>h1</b> используя только таблицу стилей обратно в черный.
+                    </li>
+                    <li>
+                        Убрать селекторы по <b>ID</b> и <b>!important</b> а так же <b>универсальный селектор</b> и задать черный цвет для элементов, для всех заголовков цвет <b>#6dc6a9</b>.
+                    </li>
+                </ol>
+            </div>
+
+            <h3>Фоновые изображения</h3>
+            <p>
+                Кроме возможности использования изображений в явном виде, как картинка на странице в CSS есть возможность задания фонового изображения для элементов.
+            </p>
+            <p>
+                Задать фоновое изображение и его параметры можно с помощью нескольких свойств, самые распространённые это:
+            </p>
+            <ul>
+                <li><b>background-image</b> &mdash; задаёт собственно фоновое изображение.</li>
+                <li><b>background-repeat</b> &mdash; повторяется ли изображение как узор, не повторяется, повторяется ли только по горизонтали либо только по вертикали.</li>
+                <li><b>background-position</b> &mdash; задаёт расположение изображения относительно размеров элемента.</li>
+                <li><b>background-size</b> &mdash; задаёт размер фонового изображения.</li>
+                <li><b>background-attachment</b> &mdash; зафиксировано ли изображение.</li>
+            </ul>
+            <p>
+                Если задано несколько изображений, значения свойств идут через запятую.
+            </p>
+            <h4>background-image</h4>
+            <blockquote>
+                <b>Синтаксис</b>
+                background-image: url(ссылка_на_изображение);
+            </blockquote>
+            <p>
+                Можно задавать несколько фоновых изображений.
+            </p>
+            <blockquote>
+                <b>Синтаксис</b>
+                background-image: url(ссылка_на_изображение_1), url(ссылка_на_изображение_2);
+            </blockquote>
+            <p data-height="216" data-theme-id="0" data-slug-hash="bwoqJX" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/bwoqJX/">background-image</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <h4>background-repeat</h4>
+            <p>
+                Чтобы задать как должно повторяться изображение используется один из четырёх параметров:
+            </p>
+            <ul>
+                <li><b>no-repeat</b> &mdash; не повторять изображение.</li>
+                <li><b>repeat</b> &mdash; повторять изображение и по горизонтали и по вертикали.</li>
+                <li><b>repeat-x</b> &mdash; повторять изображение только по горизонтали.</li>
+                <li><b>repeat-y</b> &mdash; повторять изображение только по вертикали.</li>
+            </ul>
+            <blockquote>
+                <b>Синтаксис</b>
+                background-repeat: параметр_как_повторять;
+            </blockquote>
+            <p data-height="214" data-theme-id="0" data-slug-hash="KgXWOV" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/KgXWOV/">background-image background-repeat</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+            <h4>background-position</h4>
+            <p>
+                Свойство задающее положение изображения относительно размера элемента:<br />
+                ноль по X и Y в левом верхнем углу элемента<br />
+                по горизонтали (left, right, center, %, px, другие единицы) - первое значение
+                <br />по вертикали (top, bottom, center, %, px, другие единицы).
+                <br />Варианты задания:
+            </p>
+            <ul>
+                <li><b>top left</b> &mdash; левый верхний угол.</li>
+                <li><b>50% 50%</b> &mdash; по центру.</li>
+                <li><b>100% 50%</b> &mdash; справа и выравнивание по вертикали по центру.</li>
+            </ul>н
+            <blockquote>
+                <b>Синтаксис</b>
+                background-position: позиция_X позиция_Y;
+            </blockquote>
+            <p data-height="220" data-theme-id="0" data-slug-hash="RGLVNE" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/RGLVNE/">background-image background-repeat background-position</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <h4>background-size</h4>
+            <p>
+                Размер как ширина и высота (width и height)
+            </p>
+            <blockquote>
+                <b>Синтаксис</b>
+                background-size: ширина высота;
+            </blockquote>
+            <p data-height="313" data-theme-id="0" data-slug-hash="KgXmdr" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/KgXmdr/">background-image background-repeat background-position background-size</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <h4>background-attachment</h4>
+            <p>
+                Чтобы задать зафиксировано ли изображение либо будет прокручиваться вместе с контентом задаётся одно из значений:
+            </p>
+            <ul>
+                <li><b>fixed</b> &mdash; изображение неподвижно при прокрутке (привязано к видомй части окна браузера).</li>
+                <li><b>scroll</b> &mdash; прокручивается вместе с контентом.</li>
+                <li><b>local</b> &mdash; фон фиксируется с учётом поведения элемента. Если элемент имеет прокрутку, то фон будет прокручиваться вместе с содержимым, но фон выходящий за рамки элемента остаётся на месте.</li>
+            </ul>
+            <blockquote>
+                <b>Синтаксис</b>
+                background-attachment: параметр_как_зафиксировано;
+            </blockquote>
+            <p data-height="265" data-theme-id="0" data-slug-hash="ozGWxP" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/ozGWxP/">background-image background-repeat background-position background-size background-attachment</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <h4>
+                Background
+            </h4>
+            <p>
+                Сокращённая запись позволяет задать и цвет и фоновое изображение c параметрами (ссылка, повторение, позиция, как зафиксировано):
+            </p>
+            <blockquote>
+                <b>Синтаксис</b>
+                background: цвет url(ссылка_на_изображение) параметр_как_повторять позиция_X позиция_Y параметр_как_зафиксировано;
+            </blockquote>
+            <p data-height="265" data-theme-id="0" data-slug-hash="YGAVpB" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/YGAVpB/">background</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>
+                        Задать для элемента <b>body</b> фоновое изображение <b><a href="http://spalah.ua/images/content/bg.png">http://spalah.ua/images/content/bg.png</a></b>.
+                    </li>
+                    <li>
+                        Ссылку <b>переход к приоритетам изучения</b> привести к такому виду:</b><br />
+                        <img src="images/button.png" alt="Ссылка кнопка" /><br />
+                        Ссылка на изображение стрелки - <a href="http://newsch.s-label.com.ua/wp-content/themes/spalah_lp/images/minified-svg/arrow-down.svg">http://newsch.s-label.com.ua/wp-content/themes/spalah_lp/images/minified-svg/arrow-down.svg</a><br />
+                        Комментарий:<br />
+                        добавить внутренний отступ сверху, слева и снизу по 20px и справа 50px, <br />
+                        рамку шириной 1px и цветом #84c6e6, <br />
+                        задать border-radius размером 20px,
+                        задать размер фонового изображения 40px x 20px<br />
+                        добавить дополнительные свойства чтобы изображение не повторялось и спозиционировать его справа по центру по вертикали.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="task">
+                <h3>Домашнее задание</h3>
                 <ol>
                     <li>Пройти курс <b>Структура HTML-документа</b> весь.</li>
                     <li>Пройти курс <b>Селекторы</b> (первую часть) <b>до дочерних селекторов (первые 8 заданий)</b>.</li>
@@ -1010,5 +1227,16 @@
 <script>hljs.initHighlightingOnLoad();</script>
 <script src="javascripts/main.js"></script>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<script src="javascripts/jquery.js"></script>
+<script src="javascripts/jquery.scrollNav.min.js"></script>
+<script>
+    $('#content-wrapper').scrollNav({
+        sections: 'h2, h3, h4',
+        subSections: true,
+        sectionElem: 'div',
+        showHeadline: true,
+        headlineText: 'Перейти к'
+    });
+</script>
 </body>
 </html>
