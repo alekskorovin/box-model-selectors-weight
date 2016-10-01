@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
@@ -38,7 +37,7 @@
                 Файловая структура проекта
             </h3>
             <p>Для лучшей поддержки кода проекта необходима понятная и очевидная файловая структура, необходимо логически разделять файлы которые используются в веб-странице. <br />Понятная структура проекта обеспечивает легкость поддержки и масштабирования.</p>
-            <h4>Лучшие практики формирования файловой структуре проекта:</h4>
+            <h4>Лучшие практики формирования файловой структуры проекта:</h4>
             <ul>
                 <li>Все файлы посвященные проекту должны размещаться в папке с названием проекта.</li>
                 <li>Общее правило &mdash; по возможности все файлы одного типа группировать в папку.</li>
@@ -49,9 +48,11 @@
                 <li><b>Шрифты</b> &mdash; в папке <b>fonts</b>.</li>
                 <li><b>Сторонние библиотеки</b> в папке <b>vendor</b></li>
             </ul>
-
+            <p>
+                Давайте применим эту структуру к нашей предыдущей вёрстке.
+            </p>
             <h4>Примеры структур популярных проектов</h4>
-            <h5>HTML5 boilerplate</h5>
+            <h5><a href="https://html5boilerplate.com/">HTML5 boilerplate</a></h5>
             <img src="images/structure-html5-boilerplate.png" alt="Корень папки проекта H5Bp" style="float: right; max-width: 70%; margin-left: 2rem;" />
             <p>Стоит рассмотреть структуру одной из самых популярной заготовки для верстки <a href="https://html5boilerplate.com/">HTML5Boilerplate</a>, это заготовка которую можно использовать при создании проекта с нуля:</p>
             <ul>
@@ -63,7 +64,7 @@
                 <li>Так же в корне проекта лежит <b>favicon.ico</b> &mdash; мини-иконка которая отображается слева от названия вкладки веб-браузера.</li>
             </ul>
 
-            <h5>Bootstrap</h5>
+            <h5><a href="http://getbootstrap.com/">Bootstrap</a></h5>
             <img src="images/structure-bootstrap.png" alt="Корень папки проекта Bootstrap" style="float: right; max-width: 70%; margin-left: 2rem;" />
             <p><b>Bootstrap</b> &mdash; это наиболее популярный HTML/CSS/JS фреймворк с заготовленными стилями и скриптами, содержащий большинство используемых на веб-страницах компонентов для responsive (отзывчивых) mobile first веб-проектов.</p>
             <ul>
@@ -73,7 +74,7 @@
                 <li>Предполагается что HTML-файлы с подключением CSS- и JS-файлов фреймворка будет создавать верстальщик.</li>
             </ul>
 
-            <h5>Foundation</h5>
+            <h5><a href="http://foundation.zurb.com/">Foundation</a></h5>
             <img src="images/structure-foundation.png" alt="Корень папки проекта Foundation" style="float: right; max-width: 70%; margin-left: 2rem;" />
             <p><b>Foundation</b> &mdash; это HTML/CSS/JS фреймворк подобный <b>Bootstrap</b> для responsive (отзывчивых) mobile first веб-проектов.</p>
             <ul>
@@ -89,7 +90,65 @@
             </blockquote>
             <p>Вариант структуры проекта, включающей общепринятые практики:</p>
             <p>Структура может зависеть от специфики проекта, поэтому может отличаться от рассмотренных вариантов.</p>
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Создать новую папку на рабочем столе с названием <b>project</b>.</li>
+                    <li>Скопировать в эту папку файлы с предыдущего занятия (<b>index.html</b>, <b>styles.css</b>). Если в текущей версии у вас есть заглавные буквы &mdash; переименуйте их в строчные.</li>
+                    <li>Создать в новой папке <b>project</b> подпапки <b>css</b> и <b>img</b>.</li>
+                    <li>Скопировать в подпапку <b>css</b> свой <b>styles.css</b> файл и переименовать его в <b>main.css</b>. Открыть <b>index.html</b> и обновить путь к стилям:<br />
+                        было <code class="html">&lt;link rel="stylesheet" href="styles.css" /&gt;</code>
+                        <br /> должно стать: <code class="html">&lt;link rel="stylesheet" href="<b>css/main.css</b>" /&gt;</code>.</li>
+                    <li>
+                        Изображение скопировать в подпапку <b>img</b> и обновить путь к нему:<br />
+                        был путь <code class="html">&lt;img src="logo.svg" .../&gt;</code><br /> должен стать <code class="html">&lt;img src="<b>img/</b>logo.svg" .../&gt;</code>.<br />
+                        (Если ссылка на изображение была абсолютной, скопируйте изображение и сделайте путь к нему относительным).
+                    </li>
+                </ol>
+                <p>
+                    В итоге должна получиться такая структура:<br />
+                    <img src="images/project-structure.png" alt="Структура проекта" /><br />
+                    При этом страница в браузере должна выглядеть как прежде.
+                </p>
+            </div>
+            <h5>Favicon</h5>
+            <p>
+                <b>Favicon</b> &mdash; фавинка, значок сайта, обычно размером 16×16 пикселей в формате ICO. Это то что вы видите на фкладке браузера в левом верхнем углу. <a href="http://iconhandbook.co.uk/reference/examples/favicons/">Существует большое количество значков</a> для различных браузеров и типов устройств.
+            </p>
+            <blockquote>
+                <b>Инструмент</b>
+                Существует веб-сервисы генерирующие из одного большого квадратного изображения другие форматы favicon:
+                <ul>
+                    <li><a href="http://realfavicongenerator.net/">http://realfavicongenerator.net</a></li>
+                    <li><a href="http://www.favicon-generator.org/">http://www.favicon-generator.org</a></li>
+                </ul>
+            </blockquote>
+            <p>
+                Самый простой вариант иконки в формате ICO, по умолчанию этот файл размещается в корне сайта &mdash; браузеры автоматически пытаются загрузить этот значок по адресу<br /> <b>адрес-сайта.com/favicon.ico</b>.
+            </p>
+            <p>
+                Для добавления ссылки на <b>favicon</b> в явном виде в HTML-код страницы используется мета-тег, размещённый в элементе <b>head</b>:
+            </p>
+            <pre><code class="html">&lt;link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /&gt;</code></pre>
+
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Скачать иконку <a href="http://spalah.ua/favicon.ico">http://spalah.ua/favicon.ico</a>.</li>
+                    <li>
+                        Разместить её в корне папки <b>project</b>.
+                        <p>Обновлённая структура:</p>
+                        <img src="images/sturcture-favicon.png" alt="Структура с добавленной favicon" />
+                    </li>
+                    <li>Добавить код подключения <b>favicon</b> в <b>index.html</b> с относительной ссылкой.</li>
+                    <li>Обновить страницу в браузере:<br />
+                        <img src="images/page-favicon.png" alt="Страница с favicon" />
+                    </li>
+                </ol>
+            </div>
+
             <h4>
+
                 Структура стилей в CSS-файле
             </h4>
             <p>Вариант структуры в файле со стилями:</p>
@@ -99,12 +158,211 @@
                 <li>Далее добавляются стили отдельных компонентов.</li>
                 <li>Последними идут стили для печатающих устройств.</li>
             </ul>
+            <h2>CSS: объединение, наследование и сложные селекторы</h2>
+            <h3>
+                Объединение CSS-селекторов, наследование свойств
+            </h3>
+            <h4>Объединение свойств</h4>
+            <p>
+                Несколько CSS-селекторов с одинаковыми свойствами нужно объединять, перечислив их через запятую:
+            </p>
+            <p data-height="347" data-theme-id="0" data-slug-hash="JRyKNY" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/JRyKNY/">grouping CSS selectors</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <h4>Наследование CSS-свойств</h4>
+            <p>
+                <b>Только часть CSS-свойств наследуется</b> от родителя, потому что свойства, такие как цвет фона, размеры, отступы, рамки должны быть специфическими.
+            </p>
+            <h5>Список наследуемых от родителя CSS-свойств:</h5>
+            <ul class="multi-col">
+                <li>azimuth</li>
+                <li>border-collapse</li>
+                <li>border-spacing</li>
+                <li>caption-side</li>
+                <li>color</li>
+                <li>cursor</li>
+                <li>direction</li>
+                <li>elevation</li>
+                <li>empty-cells</li>
+                <li>font-family</li>
+                <li>font-size</li>
+                <li>font-style</li>
+                <li>font-variant</li>
+                <li>font-weight</li>
+                <li>font</li>
+                <li>letter-spacing</li>
+                <li>line-height</li>
+                <li>list-style-image</li>
+                <li>list-style-position</li>
+                <li>list-style-type</li>
+                <li>list-style</li>
+                <li>orphans</li>
+                <li>pitch-range</li>
+                <li>pitch</li>
+                <li>quotes</li>
+                <li>richness</li>
+                <li>speak-header</li>
+                <li>speak-numeral</li>
+                <li>speak-punctuation</li>
+                <li>speak</li>
+                <li>speech-rate</li>
+                <li>stress</li>
+                <li>text-align</li>
+                <li>text-indent</li>
+                <li>text-transform</li>
+                <li>visibility</li>
+                <li>voice-family</li>
+                <li>volume</li>
+                <li>white-space</li>
+                <li>widows</li>
+                <li>word-spacing</li>
+            </ul>
+            <blockquote>
+                <b>Особенность</b>
+                Для проверки наследуется (inherited) ли свойство используйте справочники:
+                <ul>
+                    <li><a href="https://www.w3.org/Style/CSS/all-properties.en.html">https://www.w3.org/Style/CSS/all-properties.en.html</a> &mdash; официальные спецификации W3.</li>
+                    <li><a href="https://developer.mozilla.org/ru/docs/Web/CSS/Reference">Справочник от Mozilla</a>.</li>
+                    <li><a href="https://webref.ru/css">Справочник CSS (WebReference.ru)</a>.</li>
+                </ul>
+            </blockquote>
+
+            <h3>
+                Сложные CSS-cелекторы (complex selectors)
+            </h3>
+            <h4>Селектор потомка (контекстный селектор, descendant selector)</h4>
+            <h4>Вложенность</h4>
+            <p>
+                В HTML мы имеем дело с вложенными структурами &mdash; простейший пример списки. Можно испоьзовать <b>селектор потомка</b> (контекстный селектор) для обращения к вложенному элементу.
+            </p>
+            <blockquote>
+                <b>Синтаксис</b>
+                селектор_<strong>родитель</strong> <strong>потомок</strong> { ... }<br />
+                селектор_<strong>дедушка</strong> <strong>отец</strong> <strong>ребенок</strong> { ... }<br />
+                селектор_<strong>прабабушка</strong> <strong>бабушка</strong><br /> <strong>мама</strong> <strong>ребенок</strong> { ... }
+            </blockquote>
+            <p data-height="300" data-theme-id="0" data-slug-hash="KgvrxE" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/KgvrxE/">CSS and HTML nesting</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <blockquote>
+                <b>Особенность</b>
+                Максимальная рекомендуемая вложенность 3-4 селектора, при большем их количестве начинаются проблемы с быстродействием браузера.
+            </blockquote>
+            <h4>Универсальный селектор (*, universal selector)</h4>
+            <p>
+                Используя универсальный селектор («звездочка») <b>*</b> можно выбрать все элементы. Его можно использовать глобально, чтобы примениь какой-то стиль ко всем элементам. Либо добавлять его после основного селектора, чтобы применить какое-то свойство к дочерним элементам.
+            </p>
+            <h5>Универсальный селектор для всех элементов</h5>
+            <p data-height="396" data-theme-id="0" data-slug-hash="Xjadjq" data-default-tab="css,result" data-editable="true"  data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/Xjadjq/">universal selector</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <h5>Универсальный селектор для дочерних элементов</h5>
+            <p data-height="317" data-theme-id="0" data-slug-hash="VKzaPO" data-default-tab="html,result" data-editable="true"  data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/VKzaPO/">universal selector for child elements</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <blockquote>
+                <b>Особенность</b>
+                Если используется универсальный селектор для дочерних элементов, то он будет применяться так же и для всех элементов вложенных в дочерний элемент.
+            </blockquote>
+            <p data-height="361" data-theme-id="0" data-slug-hash="PGKNjk" data-default-tab="html,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/PGKNjk/">universal selector for child sub elements</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <p>
+                До появления таблиц для сброса стилей <b><a href="http://meyerweb.com/eric/tools/css/reset/">reset.css</a></b> (Eric Meyer) и <b><a href="https://necolas.github.io/normalize.css/">normalize.css</a></b> (Nicolas Gallagher и Jonathan Neal),  для сброса стилей использовали универсальный селектор:
+            </p>
+            <p data-height="295" data-theme-id="0" data-slug-hash="ZpJWqr" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/ZpJWqr/">universal selector reset of styles</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <p>
+                Обнуление отступов элементо позволяет не переопределять каждый отступ согласно дизайну.
+            </p>
+            <h5><a href="http://meyerweb.com/eric/tools/css/reset/">reset.css</a></h5>
+            <p>
+                Более совершенный способ обнуления в том числе и размеров шрифта.
+            </p>
+            <p data-height="358" data-theme-id="0" data-slug-hash="YGxqdX" data-default-tab="html,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/YGxqdX/">reset.css</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <h5><a href="https://necolas.github.io/normalize.css/">normalize.css</a></h5>
+            <p>
+                <strong>Рекомендуется подключать эту таблицу стилей перед началом работы.</strong> Задаёт вид элементов одинаковым во всех браузерах.
+            </p>
+            <p data-height="365" data-theme-id="0" data-slug-hash="VKzagL" data-default-tab="html,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/VKzagL/">normalize.css</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Скачать файл <b><a href="https://necolas.github.io/normalize.css/">normalize.css</a></b>.</li>
+                    <li>В папке <b>project</b> создать подпапку <b>vendor</b> и в ней папку <b>normalize</b>.</li>
+                    <li>Скопировать в подпапку <b>normalize</b> файл <b>normalize.css</b>.
+                        <p>Структура проекта должна стать такой:</p>
+                        <img src="images/structure-normalize.png" alt="В проект добавлен normalize.css" />
+                    </li>
+                    <li>В <b>index.html</b> подключить таблицу стилей <b>normalize.css</b> перед своей таблицей стилей.
+<pre><code class="html">...
+    &lt;link rel="stylesheet" href="vendor/normalize/normalize.css" /&gt;
+    &lt;link rel="stylesheet" href="css/main.css" /&gt;
+    ...
+</code></pre>
+                    </li>
+                    <li>Обновить страницу в браузере.</li>
+                </ol>
+            </div>
+            <h4>Селектор непосредственного потомка (дочерний, child selector)</h4>
+            <p>
+                Для указания элемента который непосредственно вложен в родителя используется селектор <b>непосредственного потомка</b> &mdash; символ <code class="css">&gt;</code>. Дочерний элемент это элемент обозначенный тегом идущим <b>сразу после открывающего родительского</b> тега.
+            </p>
+            <blockquote>
+                <b>Синтаксис</b>
+                селектор <strong>&gt;</strong> непосредственно_дочерний { ... }
+            </blockquote>
+            <p>В этом примере мы добавили рамку (border) снизу только элементам списка первого уровня:</p>
+            <p data-height="265" data-theme-id="0" data-slug-hash="XjajbK" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/XjajbK/">CSS and HTML nesting</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <h4>Селектор соседства (general sibling selector)</h4>
+            <p>
+                В CSS3 можно выбирать соседние элементы селектором соседства &mdash; символ <code class="css">~</code>. При этом выбирается любой соседский элемент (находящийся на одном уровне вложенности) идущий <b>после</b> элемента выбранного первым селектором.
+            </p>
+            <blockquote>
+                <b>Синтаксис</b>
+                селектор <strong>~</strong> соседский_селектор { ... }
+            </blockquote>
+            <p data-height="164" data-theme-id="0" data-slug-hash="xELRVa" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/xELRVa/">CSS General sibling selector</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <h4>Селектор непосредственного соседства (соседский, adjacent sibling selector)</h4>
+            <p>
+                В CSS3 так же можно выбирать непосредственно соседский элемент &mdash; символ <code class="css">+</code>. При этом выбирается соседский элемент идущий <b>сразу после</b> элемента выбранного первым селектором.
+            </p>
+            <blockquote>
+                <b>Синтаксис</b>
+                селектор <strong>+</strong> ближайший_сосед { ... }
+            </blockquote>
+            <p data-height="172" data-theme-id="0" data-slug-hash="vXJyWY" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/vXJyWY/">CSS Adjacent sibling selector</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+            <h5>Немного SEO: ключевые слова и описание содержания страницы</h5>
+            <p>
+                Разработчики поисковых систем периодически меняют свои алгоритмы, но в любом случае для <b>S</b>earch <b>E</b>gine <b>O</b>ptimization не лишним будет добавить полезное содержание видимое только для поисковых роботов.
+            </p>
+            <h6>Ключевые слова</h6>
+            <p>
+                В HTML странице можно указать ключевые слова, характерные для контента этой страницы &mdash; это слова, наиболее ясно описывающие страницу и повторяющиеся в тексте страницы несколько раз.
+            </p>
+            <p>
+                Чтобы задать ключевые слова используется meta-тег с названием <b>keywords</b>, содержащий в атрибуте <b>content</b> ключевые слова, перечисленные через запятую.
+            </p>
+            <p>Как и все meta-теги, этот meta-тег размещается в элементе <b>head</b>:</p>
+<pre><code class="html">&lt;head&gt;
+    ...
+    &lt;meta name="keywords" content="ключевое слово, ключевая фраза, словосочетание" /&gt;
+    ...
+&lt;/head&gt;</code></pre>
+            <h6>Описание содержания страницы</h6>
+            <p>
+                В HTML странице можно указать описание содержания страницы с помощью meta-тега с названием <b>description</b> (описание), который содержащит в атрибуте <b>content</b> текст описывающий веб-страницу.
+            </p>
+            <p>Как и все meta-теги, этот meta-тег размещается в элементе <b>head</b>:</p>
+<pre><code class="html">&lt;head&gt;
+    ...
+    &lt;meta name="description" content="описание страницы появляющееся в результатах поиска" /&gt;
+    ...
+&lt;/head&gt;</code></pre>
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Открыть <b>index.html</b></li>
+                    <li>Добавить ключевые слова и описание страницы.</li>
+                    <li>Обновить страницу в браузере и проверить не сломалась ли она. Исправить код, если есть дефекты.</li>
+                </ol>
+            </div>
             <h2>
                 <a id="validation" class="anchor" href="#validation" aria-hidden="true"><span aria-hidden="true"
                                                                                   class="octicon octicon-link"></span>Валидность кода</a>
             </h2>
             <p>
-                <b>Валидность</b> &mdash; это правильность кода, это оценка соответствия кода стандартам описанным в спецификациях W3C.
+                <b>Валидность</b> &mdash; это правильность кода, это оценка соответствия кода стандартам описанным в спецификациях <a href="http://w3.org">W3C</a> (<b>W</b>orld <b>W</b>ide <b>W</b>eb Consorcium).
             </p>
             <p>
                 Чтобы выяснить, насколько код валиден, необходимо провести валидацию &mdash; проверку соответствия стандартам W3C с выявлением ошибок. Валидным будет код, который был проверен и не имеет замечаний.
@@ -122,7 +380,7 @@
             </p>
             <p>Существуют расширения браузеров и специализированные сервисы, позволяющие провалидировать код:</p>
             <ul>
-                <li><a href="http://validator.w3.org/">http://validator.w3.org/</a> &mdash; официальный валидатор HTML, XHTML, SVG-кода от W3 (Markup Validation Service).
+                <li><a href="http://validator.w3.org/">http://validator.w3.org/</a> &mdash; официальный валидатор HTML, XHTML, SVG-кода от W3C (Markup Validation Service).
                     <p>
                         Чтобы проверить HTML-документ можно:
                     </p>
@@ -147,9 +405,22 @@
                 <strong>Вывод:</strong><br />
                 Валидировать веб-страницы необходимо, но поддержка большего количества пользователей более важна.
             </blockquote>
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Открыть <b>index.html</b></li>
+                    <li>Скопировать в буфер обмена весь HTML-код страницы.</li>
+                    <li>Зайти на страницу сервиса W3C валидирующего HTML-код &mdash; <a href="https://validator.w3.org/#validate_by_input">https://validator.w3.org/#validate_by_input</a>, вставить свой код и нажать кнопку "Check" чтобы запустить проверку кода.<br />
+                        <img src="images/validate-html.png" alt="Проверить валидность HTML-кода" />
+                    </li>
+                    <li>Исправить код, если есть дефекты и проверить его снова, до получения сообщения о валидности.<br />
+                        <img src="images/validate-html-no-warnings.png" alt="Сообщение о том, что HTML-код валиден" />
+                    </li>
+                </ol>
+            </div>
             <h3>Валидность CSS-кода</h3>
             <p>
-                Валидность CSS-кода проверяется на соответствие спецификации CSS2.1 или CSS3.
+                Валидность CSS-кода &mdash; это результат проверки CSS-кода на соответствие спецификации CSS2.1 или CSS3.
             </p>
             <p>
                 Как и с HTML-кодом, проверка CSS-кода позволяет выявить грубые ошибки, которые браузер, как правило, игнорирует &mdash; неправильное значение либо свойство не применится к элементу и будет пропущено. В некоторых случаях <b>незакрытое правило вызовет глобальное применение стилей для всех элементов</b>, например весь текст на странице станет красным, хотя красным должно было быть только сообщение об ошибке.
@@ -158,7 +429,7 @@
                 Сервисы для проверки CSS-кода:
             </p>
             <ul>
-                <li><a href="http://jigsaw.w3.org/css-validator/validator.html.ru">http://jigsaw.w3.org/css-validator/</a> &mdash; официальный валидатор CSS-кода от W3 (CSS Validation Service).
+                <li><a href="http://jigsaw.w3.org/css-validator/validator.html.ru">http://jigsaw.w3.org/css-validator/</a> &mdash; официальный валидатор CSS-кода от W3C (CSS Validation Service).
                     <p>
                         Чтобы проверить CSS можно:
                     </p>
@@ -170,6 +441,21 @@
                     Дополнительно можно указать профиль: CSS2.1, CSS3 и другие.
                 </li>
             </ul>
+
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Открыть <b>main.css</b></li>
+                    <li>Скопировать в буфер обмена весь CSS-код вашей таблицы стилей.</li>
+                    <li>Зайти на страницу сервиса W3С валидирующего HTML-код &mdash; <a href="https://jigsaw.w3.org/css-validator/validator.html.ru#validate_by_input">https://jigsaw.w3.org/css-validator/validator.html.ru#validate_by_input</a>, вставить свой код и нажать кнопку "Проверить" чтобы запустить проверку кода.<br />
+                        <img src="images/validate-css.png" alt="Проверить валидность CSS-кода" />
+                    </li>
+                    <li>Исправить код, если есть дефекты и проверить его снова, до получения сообщения о валидности.<br />
+                        <img src="images/validate-css-no-warnings.png" alt="Сообщение о том, что CSS-код валиден" />
+                    </li>
+                </ol>
+            </div>
+
             <h2>
                 <a id="box-model" class="anchor" href="box-model" aria-hidden="true"><span aria-hidden="true"
                                                                                   class="octicon octicon-link"></span>Блочная модель</a>
@@ -287,10 +573,45 @@
                     <div class="box-content-en">&nbsp;</div>
                 </div>
             </div>
-            </p>
             <p>
                 Блочная модель может применяться к любому блочному элементу веб-страницы и к остальным элементам с некоторыми особенностями.
             </p>
+            <h3>Размеры</h3>
+            <p>
+                Для блочного элемента в CSS задаются размеры с помощью свойств <b>width</b> (ширина) и <b>height</b> (высота):
+            </p>
+            <p data-height="178" data-theme-id="0" data-slug-hash="mArgva" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/mArgva/">Block with sizes</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <blockquote>
+                <b>Особенность</b>
+                Если высота (height) задана для элемента в процентах и для элемента не задано свойство <strong>position</strong> на <strong>absolute</strong> или <strong>fixed</strong>, <strong>высота остаётся прежней</strong>!
+            </blockquote>
+            <h4>Минимальные и максимальные размеры</h4>
+            <p>
+                Для элемента можно задавать минимальные и максимальыне размеры:
+            </p>
+            <ul>
+                <li><b>min-width</b> &mdash; минимальная ширина (блок не уменьшится меньше этого размера, даже если не будет достаточно места в доступной области страницы).</li>
+                <li><b>max-width</b> &mdash; максимальная ширина (блок не растянется шире этого значения).</li>
+                <li><b>min-height</b> &mdash; минимальная высота.</li>
+                <li><b>max-height</b> &mdash; максимальная высота.</li>
+            </ul>
+            <p data-height="265" data-theme-id="0" data-slug-hash="YGxrbJ" data-default-tab="html,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/YGxrbJ/">Block with min sizes</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <p>
+                Если уменьшить окно браузера так, чтобы элемент не вмещался по ширине или высоте, в браузере появятся полосы прокрутки.
+            </p>
+            <p>
+                Если контент не влазит в блок он визуально "выпадает" из блока, при этом размеры блока остаются те же:
+            </p>
+            <p data-height="368" data-theme-id="0" data-slug-hash="WGEBAw" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/WGEBAw/">Block with min and max sizes</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <blockquote>
+                <b>Вывод</b>
+                Элементы веб-страницы тянутся по высоте (кроме элементов форм). Стоит избегать задавания высоты для элементов, кроме отдельных случаев.
+            </blockquote>
+            <p>
+                При заданной ширине элемент можно вырванивать по горизонтали используя свойство <b>margin</b> со значениями <b>auto</b>:
+            </p>
+            <p data-height="497" data-theme-id="0" data-slug-hash="jrLoxw" data-default-tab="html,result" data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/jrLoxw/">Block with size and margin auto</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
             <h3>Рамки</h3>
             <p>Рамки могут применяться к большинству HTML элементов внутри элемента <b>body</b>.</p>
             <h4>border-style</h4>
@@ -423,9 +744,15 @@
             <p>
                 Для правильного форматирования рекомендуется использовать файл .editorconfig в вашем редакторе. В этом файле размещаются настройки форматирования кода редактора.
             </p>
+            <blockquote>
+                <b>О проекте .editorconfig</b>
+                Можно больше узнать на официальном сайте <a href="http://editorconfig.org/">EditorConfig</a>.
+            </blockquote>
             <h3>Примеры стилей кода:</h3>
             <ul>
                 <li><a href="http://html-academy.ru/codeguide/">Стиль кода Академии HTML</a></li>
+                <li><a href="https://google.github.io/styleguide/htmlcssguide.xml">Google</a></li>
+                <li><a href="http://codeguide.co/">Code Guide by @mdo (от создателя Bootstrap)</a></li>
             </ul>
             <h3>Язык и кодировка</h3>
             <p>Рекомендуется всегда использовать кодировку символов <b>utf-8</b>. Кодировка задается в элементе <b>head</b> с помощью элемента <b>meta</b> с атрибутом <b>charset</b> равному <b>utf-8</b>:</p>
@@ -525,9 +852,56 @@
                 Избегать селектор по <b>id</b> так где это возможно.
             </p>
             <p>
-                Везде, там где это возможно, следует стараться использовать имя класса как селектор.<br />
+                Везде, там где это возможно, следует стараться использовать имя класса как селектор (вместо id).<br />
                 <code class="css">.class-name { padding: 10px; }</code>
             </p>
+            <blockquote>
+                <b>К прочтению</b>
+                Превосходные рекомендации содержатся в документе <a href="https://github.com/necolas/idiomatic-css/tree/master/translations/ru-RU">Принципы написания однородного CSS-кода</a>.
+            </blockquote>
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Открыть редактор кода <b>Sublime</b>. У кого не установлен &mdash; <a href="https://www.sublimetext.com/">скачать</a> и установить <b>Package Control</b>,<br />
+                        <img src="images/sublime-install-package-control.png" alt="Установить Package Control" />
+                        <br />
+                        у кого уже установлено перейти к следующему шагу.
+                    </li>
+                    <li>
+                        Зайти в <b>Preferences</b> и выбрать <b>Package Control</b><br />
+                        <img src="images/sublime-run-package-control.png" alt="Запустить Package Control" />
+                    </li>
+                    <li>
+                        Нажать <b>Install Package</b><br />
+                        <img src="images/sublime-run-package-control-install-package.png" alt="Установить пакет" />
+                    </li>
+                    <li>
+                        Ввести <b>editorconfig</b>, выбрать пакет <b>EditorConfig</b> и нажать <b>Enter</b>.
+                    </li>
+                    <li>
+                        Скачать <a href=""><b>HTML5Boilerplate</b></a><br />
+                        <img src="images/html5boilerplate-download.png" alt="Скачать HTML5Boilerplate" />
+                    </li>
+                    <li>Разархивировать файлы, и скопировать в буфер из корня папки файл <b>.editorconfig</b><br />
+                        <img src="images/editorconfig.png" alt="Скопировать editorconfig" />
+                    </li>
+                    <li>
+                        Вставить файл в корень папки <b>project</b>.
+                    </li>
+                    <li>
+                        Открыть папку <strong>project</strong> в редакторе Sublime:<br />
+                        <img src="images/sublime-open-folder.png" alt="Открыть папку" />
+                    </li>
+                    <li>
+                        Открыть HTML-файл <strong>index.html</strong> выделить весь код и нажать <b>Edit</b> затем <b>Line</b> и <strong>Reindent</strong>.<br />
+                        <img src="images/sublime-reindent.png" alt="Отформатировать код" />
+                    </li>
+                    <li>Сделать то же самое для CSS.
+                        Попробовать добавить новое CSS правило и убедиться что при нажатии клавиши <strong>Tab</strong> формируется отступ из четырёх пробелов.
+                        Если в какой-то строке выставлен отступ в два пробела, стоит попробовать удалить их и затем нажать клавишу <strong>Tab</strong>. </li>
+                </ol>
+            </div>
+
             <h2>
                 <a id="selectors-weight" class="anchor" href="selectors-weight" aria-hidden="true"><span aria-hidden="true"
                                                                                   class="octicon octicon-link"></span>“Вес селекторов”</a>
@@ -540,19 +914,19 @@
                     Теги в качестве селекторов:<br />
                     <pre><code class="css">body {
     color: grey;
-}</pre></code>
+}</code></pre>
                 </li>
                 <li>CSS-класс добавляется с помощью атрибута <b>class</b> значением которого является имя класса:<br />
                     <code class="html">&lt;p <b>class="primary-color"</b>&gt;Текст с основным цветом&lt;/p&gt;</code> к этому параграфу можно обратиться используя селектор CSS-класс (добавляется точка перед именем класса):
                     <pre><code class="css">.primary-color {
     color: blue;
-}</pre></code>
+}</code></pre>
                 </li>
                 <li>ID добавляется с помощью атрибута <b>id</b> значением которого является имя идентификатор:<br />
                     <code class="html">&lt;h1 <b>id="main-headline"</b>&gt;Основной заголовок&lt;/p&gt;</code> к этому заголовку можно обратиться используя селектор <b>id</b> (добавляется <b>#</b> перед именем класса):
                     <pre><code class="css">#main-headline {
     font-size: 2rem;
-}</pre></code></li>
+}</code></pre></li>
             </ul>
             <p>Если у нас несколько правил и селекторы имеют одинаковый вес, выигрывает селектор идущий ниже по коду:</p>
             <p data-height="180" data-theme-id="0" data-slug-hash="kkkWPP" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/kkkWPP/">equal specificity of selectors</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
@@ -605,7 +979,19 @@
             <h4>Прямое обращение к элементу против глобальных стилей</h4>
             <p>Селектор обращающийся к самому элементу всегда выигрывает у селектора относящегося к его родителям.</p>
             <p>Если заданы стили не для самого элемента а для его родителя, даже с !important, выиграет селектор относящийся к самому элементу:</p>
-            <p data-height="181" data-theme-id="0" data-slug-hash="QKKGBb" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/QKKGBb/">direct vs. inherit</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p
+            <p data-height="181" data-theme-id="0" data-slug-hash="QKKGBb" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/QKKGBb/">direct vs. inherit</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Пройти курс <b>Структура HTML-документа</b> весь.</li>
+                    <li>Пройти курс <b>Селекторы</b> (первую часть) <b>до дочерних селекторов (первые 8 заданий)</b>.</li>
+                    <li>Пройти курс <b>Наследование и каскадирование</b>.</li>
+                    <li>Пройти курс <b>Фоны</b> (первую часть) <b>до эффектов с повторяющимся фоном</b>.</li>
+                    <li>Отправить мне ссылку на свой профиль.</li>
+                </ol>
+            </div>
+
         </section>
 
         <aside id="sidebar">

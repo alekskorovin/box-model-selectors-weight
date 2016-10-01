@@ -1136,4 +1136,18 @@ body {
 .bad * {
     color: red !important;
 }
-
+.task {
+    clear: both;
+}
+.task h3:before {
+    display: none;
+}
+.multi-col {
+    font-size: 0;
+}
+.multi-col li {
+    font-size: 1rem;
+    width: 25%;
+    display: inline-block;
+    list-style: none;
+}
