@@ -803,6 +803,28 @@
                     </li>
                 </ol>
             </div>
+            <h3>Свойство display</h3>
+            <p>
+                В HTML существует несколько видов элементов, самые распространённые:
+            </p>
+            <ul>
+                <li><b>Блочные</b> &mdash; заголовки, параграфы, цитаты, элемент <b>div</b>.</li>
+                <li><b>Строчные</b> &mdash; изображения (хотя поведение как у строчно-блочных), выделенный текст (strong, em), и другие, элемент <b>span</b>, элементы форм: текстовое поле (input), многострочное текстовое поле (textarea).</li>
+                <li><b>Строчно-блочные</b> &mdash; элементы форм: кнопки (button), элемент выбора из списка (select).</li>
+            </ul>
+            <p>
+                Задавать тип элемента можно используя свойство <b>display</b> (отобразить как). Свойствами могут быть (только самые распространённые элементы, есть и другие типы элементов):
+            </p>
+            <ul>
+                <li><b>block</b> &mdash; сделать элемент блочным.</li>
+                <li><b>inline</b> &mdash; сделать элемент строчным.</li>
+                <li><b>inline-block</b> &mdash; сделать элемент строчно-блочным. Удобно для создания кнопок из ссылок.</li>
+            </ul>
+            <blockquote>
+                <b>Синтаксис</b>
+                display: тип_блока;
+            </blockquote>
+            <p data-height="360" data-theme-id="0" data-slug-hash="xEXPAv" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/xEXPAv/">display: block, inline, inline-block</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             <h2>
                 <a id="html-code-style" class="anchor" href="html-code-style" aria-hidden="true"><span aria-hidden="true"
                                                                                   class="octicon octicon-link"></span>Стиль кода HTML</a>
@@ -1191,6 +1213,7 @@
                     <li>
                         Ссылку <b>переход к приоритетам изучения</b> привести к такому виду:</b><br />
                         <img src="images/button.png" alt="Ссылка кнопка" /><br />
+                        Подсказка: надо задать для ссылки  <b>display: inline-block;</b><br />
                         Ссылка на изображение стрелки - <a href="http://newsch.s-label.com.ua/wp-content/themes/spalah_lp/images/minified-svg/arrow-down.svg">http://newsch.s-label.com.ua/wp-content/themes/spalah_lp/images/minified-svg/arrow-down.svg</a><br />
                         Комментарий:<br />
                         добавить внутренний отступ сверху, слева и снизу по 20px и справа 50px, <br />
