@@ -1152,7 +1152,7 @@ body {
     list-style: none;
 }
 .scroll-nav {
-  transform: translateX(-290px);
+  transform: translateX(-280px);
   transition: transform 0.4s ease-in-out;
   position: fixed;
   box-sizing: border-box;

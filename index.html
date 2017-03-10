@@ -147,6 +147,42 @@
                 </ol>
             </div>
 
+            <h5>Немного SEO: ключевые слова и описание содержания страницы</h5>
+            <p>
+                Разработчики поисковых систем периодически меняют свои алгоритмы, но в любом случае для <b>S</b>earch <b>E</b>gine <b>O</b>ptimization не лишним будет добавить полезное содержание видимое только для поисковых роботов.
+            </p>
+            <h6>Ключевые слова</h6>
+            <p>
+                В HTML странице можно указать ключевые слова, характерные для контента этой страницы &mdash; это слова, наиболее ясно описывающие страницу и повторяющиеся в тексте страницы несколько раз.
+            </p>
+            <p>
+                Чтобы задать ключевые слова используется meta-тег с названием <b>keywords</b>, содержащий в атрибуте <b>content</b> ключевые слова, перечисленные через запятую.
+            </p>
+            <p>Как и все meta-теги, этот meta-тег размещается в элементе <b>head</b>:</p>
+<pre><code class="html">&lt;head&gt;
+    ...
+    &lt;meta name="keywords" content="ключевое слово, ключевая фраза, словосочетание" /&gt;
+    ...
+&lt;/head&gt;</code></pre>
+            <h6>Описание содержания страницы</h6>
+            <p>
+                В HTML странице можно указать описание содержания страницы с помощью meta-тега с названием <b>description</b> (описание), который содержащит в атрибуте <b>content</b> текст описывающий веб-страницу.
+            </p>
+            <p>Как и все meta-теги, этот meta-тег размещается в элементе <b>head</b>:</p>
+<pre><code class="html">&lt;head&gt;
+    ...
+    &lt;meta name="description" content="описание страницы появляющееся в результатах поиска" /&gt;
+    ...
+&lt;/head&gt;</code></pre>
+            <div class="task">
+                <h3>Задание</h3>
+                <ol>
+                    <li>Открыть <b>index.html</b></li>
+                    <li>Добавить ключевые слова и описание страницы.</li>
+                    <li>Обновить страницу в браузере и проверить не сломалась ли она. Исправить код, если есть дефекты.</li>
+                </ol>
+            </div>
+
             <h4>
 
                 Структура стилей в CSS-файле
@@ -154,7 +190,7 @@
             <p>Вариант структуры в файле со стилями:</p>
             <ul>
                 <li>В начале рекомендуется размещать глобальные стили.</li>
-                <li>Затем размещаются стили для основных частей сайта (<b>header</b> &mdash; шапка сайта, <b>main</b> &mdash; основной блок с контентом, <b>sidebar</b> &mdash; боковая панель, <b>footer</b> &mdash; подвал).</li>
+                <li>Затем размещаются стили для основных частей сайта (<b>header</b> &mdash; шапка сайта, <b>main</b> &mdash; основной блок с контентом, <b>aside</b> &mdash; боковая панель, <b>footer</b> &mdash; подвал).</li>
                 <li>Далее добавляются стили отдельных компонентов.</li>
                 <li>Последними идут стили для печатающих устройств.</li>
             </ul>
@@ -243,7 +279,7 @@
                 селектор_<strong>дедушка</strong> <strong>отец</strong> <strong>ребенок</strong> { ... }<br />
                 селектор_<strong>прабабушка</strong> <strong>бабушка</strong><br /> <strong>мама</strong> <strong>ребенок</strong> { ... }
             </blockquote>
-            <p data-height="300" data-theme-id="0" data-slug-hash="KgvrxE" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/KgvrxE/">CSS and HTML nesting</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <p data-height="320" data-theme-id="0" data-slug-hash="KgvrxE" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/KgvrxE/">CSS and HTML nesting</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             <blockquote>
                 <b>Особенность</b>
                 Максимальная рекомендуемая вложенность 3-4 селектора, при большем их количестве начинаются проблемы с быстродействием браузера.
@@ -270,14 +306,16 @@
             </p>
             <h5><a href="http://meyerweb.com/eric/tools/css/reset/">reset.css</a></h5>
             <p>
-                Более совершенный способ обнуления в том числе и размеров шрифта.
+                Более совершенный способ обнуления в том числе и размеров шрифта <a href="http://meyerweb.com/eric/tools/css/reset/">предложил Eric Meyer</a>.
             </p>
             <p data-height="358" data-theme-id="0" data-slug-hash="YGxqdX" data-default-tab="html,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/YGxqdX/">reset.css</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             <h5><a href="https://necolas.github.io/normalize.css/">normalize.css</a></h5>
+            <small>авторы Nicolas Gallagher и Jonathan Neal</small>
             <p>
-                <strong>Рекомендуется подключать эту таблицу стилей перед началом работы.</strong> Задаёт вид элементов одинаковым во всех браузерах.
+                Наиболее совершенный способ нормализации стилей предлагает <b>normalize.css</b>. <br /><strong>Рекомендуется подключать эту таблицу стилей перед началом работы.</strong>
+                Эта таблица стилей задаёт вид элементов одинаковым во всех браузерах, не обнуляя стили а делая их максимально одинаковыми для разных браузеров.
             </p>
-            <p data-height="365" data-theme-id="0" data-slug-hash="VKzagL" data-default-tab="html,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/VKzagL/">normalize.css</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <p data-height="400" data-theme-id="0" data-slug-hash="VKzagL" data-default-tab="html,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/VKzagL/">normalize.css</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             <div class="task">
                 <h3>Задание</h3>
                 <ol>
@@ -327,41 +365,7 @@
             </blockquote>
             <p data-height="172" data-theme-id="0" data-slug-hash="vXJyWY" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/vXJyWY/">CSS Adjacent sibling selector</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
-            <h5>Немного SEO: ключевые слова и описание содержания страницы</h5>
-            <p>
-                Разработчики поисковых систем периодически меняют свои алгоритмы, но в любом случае для <b>S</b>earch <b>E</b>gine <b>O</b>ptimization не лишним будет добавить полезное содержание видимое только для поисковых роботов.
-            </p>
-            <h6>Ключевые слова</h6>
-            <p>
-                В HTML странице можно указать ключевые слова, характерные для контента этой страницы &mdash; это слова, наиболее ясно описывающие страницу и повторяющиеся в тексте страницы несколько раз.
-            </p>
-            <p>
-                Чтобы задать ключевые слова используется meta-тег с названием <b>keywords</b>, содержащий в атрибуте <b>content</b> ключевые слова, перечисленные через запятую.
-            </p>
-            <p>Как и все meta-теги, этот meta-тег размещается в элементе <b>head</b>:</p>
-<pre><code class="html">&lt;head&gt;
-    ...
-    &lt;meta name="keywords" content="ключевое слово, ключевая фраза, словосочетание" /&gt;
-    ...
-&lt;/head&gt;</code></pre>
-            <h6>Описание содержания страницы</h6>
-            <p>
-                В HTML странице можно указать описание содержания страницы с помощью meta-тега с названием <b>description</b> (описание), который содержащит в атрибуте <b>content</b> текст описывающий веб-страницу.
-            </p>
-            <p>Как и все meta-теги, этот meta-тег размещается в элементе <b>head</b>:</p>
-<pre><code class="html">&lt;head&gt;
-    ...
-    &lt;meta name="description" content="описание страницы появляющееся в результатах поиска" /&gt;
-    ...
-&lt;/head&gt;</code></pre>
-            <div class="task">
-                <h3>Задание</h3>
-                <ol>
-                    <li>Открыть <b>index.html</b></li>
-                    <li>Добавить ключевые слова и описание страницы.</li>
-                    <li>Обновить страницу в браузере и проверить не сломалась ли она. Исправить код, если есть дефекты.</li>
-                </ol>
-            </div>
+
             <h2>
                 <a id="validation" class="anchor" href="#validation" aria-hidden="true"><span aria-hidden="true"
                                                                                   class="octicon octicon-link"></span>Валидность кода</a>
@@ -381,9 +385,9 @@
             <p>Валидация даст возможность выявить наиболее грубые ошибки, которые могут вызывать большие проблемы при отображении страницы. К примеру, <b>один незакрытый тег может привести любую веб-страницу к поломанному виду, что очень критично!</b></p>
             <h5>Общепринятые практики</h5>
             <p>
-                Производители браузеров с каждой новой версией добавляют всё более лучшую поддержку спецификаций. Разработчики сайтов так же стараются поддерживать веб-стандарты, что соответствуе современным тенденциям развития веб-технологий. В редакторы кода встроены инструменты для валидации, поэтому можно исправлять ошибки сразу по мере написания кода.
+                Производители браузеров с каждой новой версией добавляют всё более лучшую поддержку спецификаций. Разработчики сайтов так же стараются поддерживать веб-стандарты, что соответствует современным тенденциям развития веб-технологий. В редакторы кода встроены инструменты для валидации, поэтому можно исправлять ошибки сразу по мере написания кода.
             </p>
-            <p>Существуют расширения браузеров и специализированные сервисы, позволяющие провалидировать код:</p>
+            <p>Существуют расширения браузеров и специализированные сервисы, позволяющие проверить код:</p>
             <ul>
                 <li><a href="http://validator.w3.org/">http://validator.w3.org/</a> &mdash; официальный валидатор HTML, XHTML, SVG-кода от W3C (Markup Validation Service).
                     <p>
@@ -404,7 +408,7 @@
                 Корректно работающий сайт, соответствующий поставленным требованиям заказчика, быстро загружающийся и корректно отображающийся в браузерах может быть невалиден.
             </p>
             <p>
-                Разработчики браузеров не всегда следовали спецификации, и в некоторых случаях код трактуется по правилам не заданным в спецификации. Если следование спецификациям вызывает проблемы в каких-то бразузерах, то стоит ориентироваться на большую поддержку пользователей, чем на следовании спецификациям.
+                Разработчики браузеров не всегда следовали спецификации, и в некоторых случаях код трактуется по правилам не заданным в спецификации. Если следование спецификациям вызывает проблемы в каких-то бразузерах, то прежде всего стоит ориентироваться на большую поддержку пользователей, чем на следовании спецификациям.
             </p>
             <blockquote>
                 <strong>Вывод:</strong><br />
@@ -469,7 +473,7 @@
                 Любой блочный элемент, например такой как <b>&lt;p&gt;, &lt;div&gt;, &lt;h1&gt;, &lt;ul&gt;</b> обладает размерами: шириной и высотой (width, height) которые можно изменять с помощью CSS.
             </p>
             <p>
-                Любой блочный элемент можно предстваить в виде прямоугольника, для которого можно задать внешние и внтуренние оступы, а содержанием прямоугольника является контент, то что находится внутри блочного элемента.
+                Любой блочный элемент можно представить в виде прямоугольника, для которого можно задать внешние и внтуренние оступы, а содержанием прямоугольника является контент, то что находится внутри блочного элемента.
             </p>
             <h3>Внешние и внутренние отступы блочных элементов</h3>
             <p>
@@ -491,10 +495,10 @@
                 <li><b>margin-left</b> &mdash; внешний отступ слева, <b>padding-left</b> &mdash; внутренний отступ слева</li>
             </ul>
             <p>
-                Если задано одно значени отступа, например <code class="css">margin: 10px;</code> то это значение будет использовано для всех четырёх сторон: сверху справа снизу слева.
+                Если задано одно значение отступа, например <code class="css">margin: 10px;</code> то это значение будет использовано для всех четырёх сторон: сверху справа снизу слева.
             </p>
             <p>
-                Есть сокращенная запись <b>shortcut</b> позволяющая задвать разные значения для сторон. Порядок задания значений идёт по часовой стрелке и критичен:
+                Есть сокращенная запись <b>shortcut</b> позволяющая задать разные значения для сторон. Порядок задания значений идёт по часовой стрелке и критичен:
             </p>
             <blockquote>
                 <b>Синтаксис:</b>
@@ -553,7 +557,7 @@
                 <li>внутренний отступ <b>padding</b> окружает контентную обасть (содержимое элемента)</li>
                 <li>в центре находится содержимое элемента контентная область</li>
             </ul>
-            <p>Если не задавать резмер элементу, он рассчитывается автоматически исходя из содержимого элемента.</p>
+            <p>Если не задавать размер элементу, он рассчитывается автоматически исходя из содержимого элемента.</p>
             <div class="box-model box-margin">
                 <div class="clearfix">
                     <div class="box-content-en">margin</div>
@@ -622,7 +626,7 @@
                 Элементы веб-страницы тянутся по высоте (кроме элементов форм). Стоит избегать задавания высоты для элементов, кроме отдельных случаев.
             </blockquote>
             <p>
-                При заданной ширине элемент можно выравнивать по горизонтали используя свойство <b>margin</b> со значениями <b>auto</b>:
+                При заданной ширине блочный элемент можно выравнивать по горизонтали используя свойство <b>margin</b> со значениями <b>auto</b>:
             </p>
             <p data-height="540" data-theme-id="0" data-slug-hash="jrLoxw" data-default-tab="html,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/jrLoxw/">Block with size and margin auto</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             <div class="task">
@@ -819,13 +823,14 @@
                 <li><b>Строчно-блочные</b> &mdash; элементы форм: кнопки (button), элемент выбора из списка (select).</li>
             </ul>
             <p>
-                Задавать тип элемента можно используя свойство <b>display</b> (отобразить как). Свойствами могут быть (только самые распространённые элементы, есть и другие типы элементов):
+                Задавать тип элемента можно используя свойство <b>display</b> (отобразить как). Свойствами могут быть:
             </p>
             <ul>
                 <li><b>block</b> &mdash; сделать элемент блочным.</li>
                 <li><b>inline</b> &mdash; сделать элемент строчным.</li>
                 <li><b>inline-block</b> &mdash; сделать элемент строчно-блочным. Удобно для создания кнопок из ссылок.</li>
             </ul>
+            <small>(приведены только самые распространённые элементы, есть и другие типы элементов)</small>
             <blockquote>
                 <b>Синтаксис</b>
                 display: тип_блока;
@@ -1069,7 +1074,7 @@
                 <img src="images/specificity-1-extended.png" alt="Специфичность !important 0,1,0,0,0,0 (10000)" />
             </p>
             <p data-height="232" data-theme-id="0" data-slug-hash="LRRbjZ" data-default-tab="css,result" data-user="alekskorovin" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/alekskorovin/pen/LRRbjZ/">important</a> by Aleksey Korovin (<a href="http://codepen.io/alekskorovin">@alekskorovin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-            <p>Если используется строчынй <b>inline</b>-стиль с <b>!important</b><br />
+            <p>Если используется строчный <b>inline</b>-стиль с <b>!important</b><br />
                 <code class="html">&lt;h1 style="color: blue !important;"&gt;Заголовок&lt;/h1&gt;</code>, то специфичность имеет ещё больший вес &mdash; 1,0,0,0,0,0 (100000):<br />
                 <img src="images/specificity-1-extended-inline.png" alt="Специфичность inline-стиля с !important 1,0,0,0,0,0 (100000)" />
             </p>
